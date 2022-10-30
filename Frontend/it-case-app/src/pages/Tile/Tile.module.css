@@ -1,8 +1,10 @@
 .TileStyle{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    border: 1px solid darkgray;
+    padding-left: 1rem;
+    padding-right: 1rem;
     width: 350px;
-    border: 1px solid red;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    height: 250px;
+    
 }
