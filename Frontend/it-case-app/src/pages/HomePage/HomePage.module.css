@@ -1,0 +1,8 @@
+.HomePage{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin:2rem 2rem 2rem 2rem;
+    gap:2rem;
+    
+}

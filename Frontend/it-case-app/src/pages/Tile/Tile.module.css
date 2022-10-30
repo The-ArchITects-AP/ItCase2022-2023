@@ -1,0 +1,8 @@
+.TileStyle{
+    display: flex;
+    flex-direction: row;
+    width: 350px;
+    border: 1px solid red;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
