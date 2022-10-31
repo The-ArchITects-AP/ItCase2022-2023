@@ -3,12 +3,12 @@ import styles from './HomePage.module.css';
 import Tile from '../Tile/Tile';
 
 
- //te vervangen door een mapping van een array van Tiles die gemapped wordt (en waar ge props aan doorgeeft)
+ //te vervangen door een mapping van een array van Tiles t (en waar ge props aan doorgeeft, titel iframe url)
       
 
 const HomePage = () => {
     return (
-      <div className={styles.HomePage}>
+      <div className={styles.homePageContainer}>
      
         <Tile />
         <Tile />
