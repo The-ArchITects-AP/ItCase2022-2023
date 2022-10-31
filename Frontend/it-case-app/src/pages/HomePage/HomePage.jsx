@@ -1,6 +1,6 @@
 
 import styles from './HomePage.module.css';
-import Tile from '../Tile/Tile';
+import Tile from '../../components/Tile/Tile';
 
 
  //te vervangen door een mapping van een array van Tiles t (en waar ge props aan doorgeeft, titel iframe url)
@@ -13,8 +13,7 @@ const HomePage = () => {
         <Tile />
         <Tile />
         <Tile />
-        <Tile />
-        <Tile />  
+
        
       </div>
     );
