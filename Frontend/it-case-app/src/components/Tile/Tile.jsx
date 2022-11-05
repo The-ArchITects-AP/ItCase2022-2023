@@ -1,10 +1,10 @@
 import styles from './Tile.module.css';
 
-const Tile = ({id, titel, iframe}) => {
+const Tile = ({id, title, iframe}) => {
     return (
         <div className={styles.tileStyle}>
 
-            <p>{titel}</p>
+            <p>{title}</p>
             <p>met ID {id} en url: {iframe} </p>
                 
            
