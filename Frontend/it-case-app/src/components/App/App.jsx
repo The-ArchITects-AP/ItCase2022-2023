@@ -2,6 +2,8 @@ import styles from './App.module.css';
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import HomePage from '../../pages/HomePage/HomePage';
+import DetailPage from '../../pages/DetailPage/DetailPage'
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';  //v6 geinstalleerd =/= v5 
 //import React, { useEffect, useState } from 'react';
 
 const App = () => {
@@ -31,32 +33,43 @@ const App = () => {
 
   let data = [
     {
-      id:1,
+      id: 1,
       title: "HR",
       iframe: "www1"
 
     },
     {
-      id:2,
+      id: 2,
       title: "Sales",
       iframe: "www2"
-
     },
     {
-      id:3,
+      id: 3,
       title: "Engineering",
       iframe: "www3"
-
     }
-
   ]
 
   return (
-    <div className={styles.appContainer}>
-      <Header />
-      <HomePage data={data}/>
-      <Footer />
-    </div>
+
+    <BrowserRouter>
+      <div className={styles.appContainer}>
+
+        <Header />
+
+        <Routes>
+
+          <Route path='/detail/:id' element={<DetailPage data={data} />} />
+
+          <Route path='/' exact element={ <HomePage data={data} />} />
+
+        </Routes>
+
+        <Footer />
+
+      </div>
+
+    </BrowserRouter>
   );
 }
 
