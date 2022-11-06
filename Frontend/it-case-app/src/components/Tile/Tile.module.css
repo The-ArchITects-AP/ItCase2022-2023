@@ -4,11 +4,11 @@
     flex-direction: column;
     border: 1px solid darkgray;
     padding-left: 1rem;
-    width: 400px;
-    height: 200px;
-
+    width: 500px;
+    height: 300px;
 
 }
+
 
 a:link {
     text-decoration: none;

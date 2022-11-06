@@ -35,18 +35,21 @@ const App = () => {
     {
       id: 1,
       title: "HR",
-      iframe: "www1"
+      iframe: "www1",
+      img:'/images/hr.jpg'
 
     },
     {
       id: 2,
       title: "Sales",
-      iframe: "www2"
+      iframe: "www2",
+      img:'/images/sales.jpg'
     },
     {
       id: 3,
       title: "Engineering",
-      iframe: "www3"
+      iframe: "www3",
+      img:'/images/engineering.jpg'
     }
   ]
 

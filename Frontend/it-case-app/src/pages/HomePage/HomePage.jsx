@@ -11,7 +11,7 @@ const HomePage = ({ data }) => {
       {data.map((element) =>
 
         <Link to={`/detail/${element.id}`} key={element.id}>
-          <Tile  title={element.title} id={element.id} iframe={element.iframe} />
+          <Tile  title={element.title} id={element.id} iframe={element.iframe} img={element.img}/>
         </Link>
 
       )}
