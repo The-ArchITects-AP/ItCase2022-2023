@@ -17,11 +17,9 @@ const App = () => {
 
   const getDrupalContent = async () => {
     let response = await fetch('http://localhost:81/drupal/allcontent?_format=json');
-    let json = await response.json();
+    let result = await response.json();
 
-    setDrupalContent(json);
-
-    console.log(drupalContent);
+    setDrupalContent(result);
   }
 
   let data = [
@@ -44,7 +42,7 @@ const App = () => {
       iframe: "www3",
       img: '/images/engineering.jpg'
     }
-  ]
+  ] 
 
   return (
 
@@ -57,7 +55,7 @@ const App = () => {
 
           <Route path='/detail/:id' element={<DetailPage data={data} />} />
 
-          <Route path='/' exact element={<HomePage data={data} />} />
+          <Route path='/' exact element={<HomePage data={drupalContent} />} />
 
         </Routes>
 

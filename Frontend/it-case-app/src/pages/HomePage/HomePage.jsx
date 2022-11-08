@@ -8,14 +8,7 @@ const HomePage = ({ data }) => {
   return (
     <div className={styles.homePageContainer}>
 
-      {data.map((element) =>
-
-        <Link to={`/detail/${element.id}`} key={element.id}>
-          <Tile  title={element.title} id={element.id} iframe={element.iframe} img={element.img}/>
-        </Link>
-
-      )}
-
+      <div><p>{`Testwaarde: ${data[0].nid[0].value}`}</p></div>
 
     </div>
   );
