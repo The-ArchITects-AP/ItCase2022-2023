@@ -3,26 +3,27 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import HomePage from '../../pages/HomePage/HomePage';
 import DetailPage from '../../pages/DetailPage/DetailPage'
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';  //v6 geinstalleerd =/= v5 
+import { BrowserRouter, Routes, Route } from 'react-router-dom';  //v6 geinstalleerd =/= v5 
 import React, { useEffect, useState } from 'react';
 
 const App = () => {
-  const [drupalContent, setDrupalContent] = useState();
 
   //getDrupalContent() haalt content (inclusief iFrames) op van locale Drupal Valerie in JSON-formaat
 
-  useEffect(() => {
-    getDrupalContent();
-  }, []);
+  //const [drupalContent, setDrupalContent] = useState([]);   initiele waarde [] of  {} is vereist (kan niet undefined zijn!)
 
-  const getDrupalContent = async () => {
-    let response = await fetch('http://localhost:81/drupal/allcontent?_format=json');
-    let result = await response.json();
+  // useEffect(() => {
+  //   getDrupalContent();
+  // }, []);
 
-    setDrupalContent(result);
-  }
+  // const getDrupalContent = async () => {
+  //   let response = await fetch('drupalapi');
+  //   let result = await response.json();
 
-  let data = [
+  //   setDrupalContent(result);
+  // }
+
+  let drupalContent = [
     {
       id: 1,
       title: "HR",
@@ -43,6 +44,7 @@ const App = () => {
       img: '/images/engineering.jpg'
     }
   ] 
+  
 
   return (
 
@@ -53,7 +55,7 @@ const App = () => {
 
         <Routes>
 
-          <Route path='/detail/:id' element={<DetailPage data={data} />} />
+          <Route path='/detail/:id' element={<DetailPage data={drupalContent} />} />
 
           <Route path='/' exact element={<HomePage data={drupalContent} />} />
 
