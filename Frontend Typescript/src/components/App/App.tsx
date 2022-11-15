@@ -4,8 +4,8 @@ import Footer from '../Footer/Footer';
 import HomePage from '../../pages/HomePage/HomePage';
 import DetailPage from '../../pages/DetailPage/DetailPage';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import React, { useEffect, useState } from 'react';
-import { Data, DrupalNode, IFrame } from '../../types';
+import { useEffect, useState } from 'react';
+import { Data, IFrame } from '../../types';
 
 const App = () => { 
   const [drupalContent, setDrupalContent] = useState<IFrame[]>();
