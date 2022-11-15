@@ -1,8 +1,7 @@
 import styles from './HomePage.module.css';
 import Tile from '../../components/Tile/Tile';
 import { Link } from 'react-router-dom'
-import { Data, DrupalNode, IFrame } from '../../types';
-import React, { useEffect, useState } from 'react';
+import { Data } from '../../types';
 
 interface DataProps {
   data: Data[]
