@@ -18,7 +18,7 @@ const ReportOverviewPage = ({ drupalContent }: DrupalContentProps) => {
           {drupalContent.map((data: IFrame) => {
             return <div key={data.title}>
 
-              <Link to={`/report/:{nid}`} key={data.nid}>
+              <Link to={`/report/${data.nid}`} key={data.nid}>
                 <h3>{data.title}</h3>
                 <p>ID: {data.nid}</p>
                 <p>Category: {data.field_categorie}</p>

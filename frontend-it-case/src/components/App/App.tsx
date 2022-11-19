@@ -28,6 +28,7 @@ const App = () => {
 
   //hardcoded data nog vervangen door custom content type in Drupal
   //aparte View + url (fetch) in Drupal maken voor deze data 
+
   const data: Data[] = [
     {
       id: "1",
@@ -58,7 +59,7 @@ const App = () => {
 
         <Routes>
 
-          <Route path='/report/:{nid}' element={<ReportDetailPage drupalContent={drupalContent}/>} />
+          <Route path='/report/:nid' element={<ReportDetailPage drupalContent={drupalContent}/>} />
           
           <Route path='/report' element={<ReportOverviewPage drupalContent={drupalContent}/>} />
 
