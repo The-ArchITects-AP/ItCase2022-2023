@@ -27,6 +27,7 @@ const App = () => {
   console.log(drupalContent);  
 
   //hardcoded data nog vervangen door custom content type in Drupal
+  //aparte View + url (fetch) in Drupal maken voor deze data 
   const data: Data[] = [
     {
       id: "1",
