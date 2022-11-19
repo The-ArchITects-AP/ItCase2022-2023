@@ -13,8 +13,8 @@ const HomePage = ({ data }: DataProps) => {
     <div className={styles.homePageContainer}>
 
       {data.map((element) =>
-
-        <Link to={`/detail`} key={element.id}>
+      
+        <Link to={`/report`} key={element.id}>
           <Tile data={element} />
         </Link>
 

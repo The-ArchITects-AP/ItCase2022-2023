@@ -1,5 +1,5 @@
 export interface Data {
-  id: number,
+  id: string,
   title: string,
   img: string
 }
@@ -10,8 +10,7 @@ export interface IFrame {
   title: string,
   field_date: string,
   field_iframe: string
-}
-  
+}  
 
 //onderstaande interfaces zijn van default return AllContent Drupal (Drupal view shows 'Entity')
 

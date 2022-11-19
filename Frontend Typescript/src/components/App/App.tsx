@@ -2,10 +2,11 @@ import styles from './App.module.css';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import HomePage from '../../pages/HomePage/HomePage';
-import DetailPage from '../../pages/DetailPage/DetailPage';
+import ReportDetailPage from '../../pages/ReportDetailPage/ReportDetailPage';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { Data, IFrame } from '../../types';
+import ReportOverviewPage from '../../pages/ReportOverviewPage/ReportOverviewPage';
 
 const App = () => { 
   const [drupalContent, setDrupalContent] = useState<IFrame[]>();
@@ -28,17 +29,17 @@ const App = () => {
   //hardcoded data nog vervangen door custom content type in Drupal
   const data: Data[] = [
     {
-      id: 1,
+      id: "1",
       title: "HR",
       img: '/images/hr.jpg'
     },
     {
-      id: 2,
+      id: "2",
       title: "Sales",
       img: '/images/sales.jpg'
     },
     {
-      id: 3,
+      id: "3",
       title: "Engineering",
       img: '/images/engineering.jpg'
     }
@@ -55,8 +56,10 @@ const App = () => {
         <Header />
 
         <Routes>
+
+          <Route path='/report/:{nid}' element={<ReportDetailPage drupalContent={drupalContent}/>} />
           
-          <Route path='/detail' element={<DetailPage drupalContent={drupalContent}/>} />
+          <Route path='/report' element={<ReportOverviewPage drupalContent={drupalContent}/>} />
 
           <Route path="/" element={<HomePage data={data} />} />
 
