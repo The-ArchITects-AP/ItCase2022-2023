@@ -1,6 +1,6 @@
 import styles from './ReportOverviewPage.module.css';
-import { IFrame } from '../../types';
-import { Link } from 'react-router-dom';
+import { Data, IFrame } from '../../types';
+import { Link, useParams } from 'react-router-dom';
 
 interface DrupalContentProps {
   drupalContent: IFrame[]
@@ -8,14 +8,23 @@ interface DrupalContentProps {
 
 const ReportOverviewPage = ({ drupalContent }: DrupalContentProps) => {
 
+  // let { title } = useParams();
+  // const toShow : IFrame[] = drupalContent.filter((item) => item.field_categorie === title);
+
+  // console.log(toShow);
+
+  // if (!toShow) {
+  //   return <p>Loading...</p>
+  // }
+
   return (
-    <div >      
+    <div >
       {!drupalContent ? (
         <div>loading...</div>
       ) : (
         <div className={styles.overviewPageContainer}>
           {drupalContent.map((data: IFrame) => {
-            return <div className={styles.reportContainer}> 
+            return <div className={styles.reportContainer}>
 
               <Link to={`/report/${data.nid}`} key={data.nid}>
                 <h3>{data.title}</h3>
