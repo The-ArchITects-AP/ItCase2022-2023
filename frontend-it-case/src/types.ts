@@ -12,6 +12,12 @@ export interface IFrame {
   field_iframe: string
 }  
 
+export interface Category {
+  title: string;
+  nid: string;
+  field_img: string;
+}
+
 //onderstaande interfaces zijn van default return AllContent Drupal (Drupal view shows 'Entity')
 
 export interface DrupalNode {

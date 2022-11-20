@@ -2,14 +2,15 @@ import styles from './App.module.css';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import HomePage from '../../pages/HomePage/HomePage';
+import ReportOverviewPage from '../../pages/ReportOverviewPage/ReportOverviewPage';
 import ReportDetailPage from '../../pages/ReportDetailPage/ReportDetailPage';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { Data, IFrame } from '../../types';
-import ReportOverviewPage from '../../pages/ReportOverviewPage/ReportOverviewPage';
+import { Category, Data, IFrame } from '../../types';
 
 const App = () => { 
   const [drupalContent, setDrupalContent] = useState<IFrame[]>();
+  const [categoriesDrupal, setCategoriesDrupal] = useState<Category[]>();
 
   //getDrupalContent() haalt content (iFrames) op van locale Drupal Valerie in JSON-formaat
 
@@ -26,8 +27,22 @@ const App = () => {
 
   console.log(drupalContent);  
 
-  //hardcoded data nog vervangen door custom content type in Drupal
-  //aparte View + url (fetch) in Drupal maken voor deze data 
+  //getDrupalCategories() haalt de categorieën (HomePage Tiles) op van locale Drupal Valerie in JSON-formaat
+
+  useEffect(() => {
+    getDrupalCategories();
+  }, []);
+
+  const getDrupalCategories = async () => {
+    let response = await fetch('http://localhost:81/drupal/categories');
+    let result = await response.json();
+
+    setCategoriesDrupal(result as Category[]);
+  }
+
+  console.log(categoriesDrupal);  
+
+  //getDrupalCategories() fetched onderstaande data (later hardcoded data verwijderen)
 
   const data: Data[] = [
     {
