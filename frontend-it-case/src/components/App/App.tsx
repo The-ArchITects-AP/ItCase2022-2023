@@ -42,25 +42,6 @@ const App = () => {
 
   console.log(categoriesDrupal);  
 
-  //getDrupalCategories() fetched onderstaande data (later hardcoded data verwijderen)
-
-  const data: Data[] = [
-    {
-      id: "1",
-      title: "HR",
-      img: '/images/hr.jpg'
-    },
-    {
-      id: "2",
-      title: "Sales",
-      img: '/images/sales.jpg'
-    },
-    {
-      id: "3",
-      title: "Engineering",
-      img: '/images/engineering.jpg'
-    }
-  ] 
 
   if(!reportsDrupal || !categoriesDrupal) {
     return <p>Loading...</p>
