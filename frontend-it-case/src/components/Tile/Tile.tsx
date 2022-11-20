@@ -1,16 +1,16 @@
-import { Data } from '../../types';
+import { Category, Data } from '../../types';
 import styles from './Tile.module.css';
 
 interface DataProps {
-    data: Data
+    category: Category
 }
 
-const Tile = ({ data }: DataProps) => {
+const Tile = ({ category }: DataProps) => {
     
     return (
         <div className={styles.tileStyle}>          
-             <p>{data.title}</p>
-            <p>met ID {data.id}</p>   
+             <p>{category.title}</p>
+            <p>met ID {category.nid}</p>   
         </div>
     );
 }

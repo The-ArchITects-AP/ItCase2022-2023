@@ -62,7 +62,7 @@ const App = () => {
     }
   ] 
 
-  if(!drupalContent) {
+  if(!drupalContent || !categoriesDrupal) {
     return <p>Loading...</p>
   }
 
@@ -78,7 +78,7 @@ const App = () => {
           
           <Route path='/report' element={<ReportOverviewPage drupalContent={drupalContent}/>} />
 
-          <Route path="/" element={<HomePage data={data} />} />
+          <Route path="/" element={<HomePage categories={categoriesDrupal} />} />
 
         </Routes>
 
