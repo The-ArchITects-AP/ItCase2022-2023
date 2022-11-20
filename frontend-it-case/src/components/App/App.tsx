@@ -8,7 +8,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { Category, Data, IFrame } from '../../types';
 
-const App = () => { 
+const App = () => {  
   const [reportsDrupal, setReportsDrupal] = useState<IFrame[]>();
   const [categoriesDrupal, setCategoriesDrupal] = useState<Category[]>();
 
@@ -74,9 +74,9 @@ const App = () => {
 
         <Routes>
 
-          <Route path='/report/:nid' element={<ReportDetailPage reports={reportsDrupal}/>} />
+          <Route path='/report/detail/:nid' element={<ReportDetailPage reports={reportsDrupal}/>} />
           
-          <Route path='/report' element={<ReportOverviewPage reports={reportsDrupal}/>} />
+          <Route path='/report/:title' element={<ReportOverviewPage reports={reportsDrupal}/>} />
 
           <Route path="/" element={<HomePage categories={categoriesDrupal} />} />
 

@@ -8,14 +8,14 @@ interface ReportProps {
 
 const ReportOverviewPage = ({ reports }: ReportProps) => {
 
-  // let { title } = useParams();
-  // const toShow : IFrame[] = drupalContent.filter((item) => item.field_categorie === title);
+  let { title } = useParams();
+  const toShow : IFrame[] = reports.filter((item) => item.field_categorie === title);
 
-  // console.log(toShow);
+  console.log(toShow);
 
-  // if (!toShow) {
-  //   return <p>Loading...</p>
-  // }
+  if (!toShow) {
+    return <p>Loading...</p>
+  }
 
   return (
     <div >
@@ -23,10 +23,10 @@ const ReportOverviewPage = ({ reports }: ReportProps) => {
         <div>loading...</div>
       ) : (
         <div className={styles.overviewPageContainer}>
-          {reports.map((data: IFrame) => {
+          {toShow.map((data: IFrame) => {
             return <div className={styles.reportContainer}>
 
-              <Link to={`/report/${data.nid}`} key={data.nid}>
+              <Link to={`/report/detail/${data.nid}`} key={data.nid}>
                 <h3>{data.title}</h3>
                 <p>ID: {data.nid}</p>
                 <p>Category: {data.field_categorie}</p>

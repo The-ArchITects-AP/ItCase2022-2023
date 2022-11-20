@@ -14,7 +14,7 @@ const HomePage = ({ categories }: CategoryProps) => {
 
       {categories.map((data) =>
       
-        <Link to={`/report`} key={data.nid}>
+        <Link to={`/report/${data.title}`} key={data.nid}>
           <Tile category={data} />
         </Link>
 
