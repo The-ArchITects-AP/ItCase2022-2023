@@ -17,7 +17,7 @@ const ReportDetailPage = ({ drupalContent }: DrupalContentProps) => {
 
     return (
         <div className={styles.detailPageContainer}>
-            <div className={styles.dashboardContainer}>
+            <div key={toShow.title}>
                 <h3>{toShow.title}</h3>
                 <p>ID: {toShow.nid}</p>
                 <p>Category: {toShow.field_categorie}</p>
