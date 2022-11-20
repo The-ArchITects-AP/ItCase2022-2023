@@ -16,7 +16,7 @@ const ReportDetailPage = ({ reports }: ReportProps) => {
     }
 
     return (
-        <div className={styles.detailPageContainer}>
+        <div className={styles.detailPageContainer} key={toShow.nid}>
             <div key={toShow.title}>
                 <h3>{toShow.title}</h3>
                 <p>ID: {toShow.nid}</p>

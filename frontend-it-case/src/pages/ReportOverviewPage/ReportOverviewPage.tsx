@@ -9,7 +9,7 @@ interface ReportProps {
 const ReportOverviewPage = ({ reports }: ReportProps) => {
 
   let { title } = useParams();
-  const toShow : IFrame[] = reports.filter((item) => item.field_categorie === title);
+  const toShow: IFrame[] = reports.filter((item) => item.field_categorie === title);
 
   console.log(toShow);
 
@@ -18,26 +18,20 @@ const ReportOverviewPage = ({ reports }: ReportProps) => {
   }
 
   return (
-    <div >
-      {!reports ? (
-        <div>loading...</div>
-      ) : (
-        <div className={styles.overviewPageContainer}>
-          {toShow.map((data: IFrame) => {
-            return <div className={styles.reportContainer}>
+    <div className={styles.overviewPageContainer}>
+      {toShow.map((data: IFrame) => {
+        return <div className={styles.reportContainer}>
 
-              <Link to={`/report/detail/${data.nid}`} key={data.nid}>
-                <h3>{data.title}</h3>
-                <p>ID: {data.nid}</p>
-                <p>Category: {data.field_categorie}</p>
-                <p>Date created: {data.field_date}</p>
-                <iframe src={data.field_iframe} title="Report" width="540" height="350"></iframe>
-              </Link>
+          <Link to={`/report/detail/${data.nid}`} key={data.nid}>
+            <h3>{data.title}</h3>
+            <p>ID: {data.nid}</p>
+            <p>Category: {data.field_categorie}</p>
+            <p>Date created: {data.field_date}</p>
+            <iframe src={data.field_iframe} title="Report" width="540" height="350"></iframe>
+          </Link>
 
-            </div>
-          })}
         </div>
-      )}
+      })}
     </div>
   );
 }

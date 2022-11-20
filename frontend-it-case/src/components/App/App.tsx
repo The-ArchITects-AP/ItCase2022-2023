@@ -8,7 +8,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { Category, Data, IFrame } from '../../types';
 
-const App = () => {  
+const App = () => {
   const [reportsDrupal, setReportsDrupal] = useState<IFrame[]>();
   const [categoriesDrupal, setCategoriesDrupal] = useState<Category[]>();
 
@@ -25,8 +25,6 @@ const App = () => {
     setReportsDrupal(result as IFrame[]);
   }
 
-  console.log(reportsDrupal);  
-
   //getDrupalCategories() haalt de categorieën (HomePage Tiles) op van locale Drupal in JSON-formaat
 
   useEffect(() => {
@@ -40,10 +38,7 @@ const App = () => {
     setCategoriesDrupal(result as Category[]);
   }
 
-  console.log(categoriesDrupal);  
-
-
-  if(!reportsDrupal || !categoriesDrupal) {
+  if (!reportsDrupal || !categoriesDrupal) {
     return <p>Loading...</p>
   }
 
@@ -55,9 +50,9 @@ const App = () => {
 
         <Routes>
 
-          <Route path='/report/detail/:nid' element={<ReportDetailPage reports={reportsDrupal}/>} />
-          
-          <Route path='/report/:title' element={<ReportOverviewPage reports={reportsDrupal}/>} />
+          <Route path='/report/detail/:nid' element={<ReportDetailPage reports={reportsDrupal} />} />
+
+          <Route path='/report/:title' element={<ReportOverviewPage reports={reportsDrupal} />} />
 
           <Route path="/" element={<HomePage categories={categoriesDrupal} />} />
 
