@@ -9,25 +9,25 @@ import { useEffect, useState } from 'react';
 import { Category, Data, IFrame } from '../../types';
 
 const App = () => { 
-  const [drupalContent, setDrupalContent] = useState<IFrame[]>();
+  const [reportsDrupal, setReportsDrupal] = useState<IFrame[]>();
   const [categoriesDrupal, setCategoriesDrupal] = useState<Category[]>();
 
-  //getDrupalContent() haalt content (iFrames) op van locale Drupal Valerie in JSON-formaat
+  //getDrupalReports() haalt rapporten (iFrames) op van locale Drupal in JSON-formaat
 
   useEffect(() => {
-    getDrupalContent();
+    getDrupalReports();
   }, []);
 
-  const getDrupalContent = async () => {
+  const getDrupalReports = async () => {
     let response = await fetch('http://localhost:81/drupal/iframes');
     let result = await response.json();
 
-    setDrupalContent(result as IFrame[]);
+    setReportsDrupal(result as IFrame[]);
   }
 
-  console.log(drupalContent);  
+  console.log(reportsDrupal);  
 
-  //getDrupalCategories() haalt de categorieën (HomePage Tiles) op van locale Drupal Valerie in JSON-formaat
+  //getDrupalCategories() haalt de categorieën (HomePage Tiles) op van locale Drupal in JSON-formaat
 
   useEffect(() => {
     getDrupalCategories();
@@ -62,7 +62,7 @@ const App = () => {
     }
   ] 
 
-  if(!drupalContent || !categoriesDrupal) {
+  if(!reportsDrupal || !categoriesDrupal) {
     return <p>Loading...</p>
   }
 
@@ -74,9 +74,9 @@ const App = () => {
 
         <Routes>
 
-          <Route path='/report/:nid' element={<ReportDetailPage drupalContent={drupalContent}/>} />
+          <Route path='/report/:nid' element={<ReportDetailPage reports={reportsDrupal}/>} />
           
-          <Route path='/report' element={<ReportOverviewPage drupalContent={drupalContent}/>} />
+          <Route path='/report' element={<ReportOverviewPage reports={reportsDrupal}/>} />
 
           <Route path="/" element={<HomePage categories={categoriesDrupal} />} />
 

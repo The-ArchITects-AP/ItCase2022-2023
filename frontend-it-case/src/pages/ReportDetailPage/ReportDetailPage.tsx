@@ -2,14 +2,14 @@ import styles from './ReportDetailPage.module.css';
 import { useParams } from "react-router-dom"
 import { IFrame } from '../../types';
 
-interface DrupalContentProps {
-    drupalContent: IFrame[]
+interface ReportProps {
+    reports: IFrame[]
 }
 
-const ReportDetailPage = ({ drupalContent }: DrupalContentProps) => {
+const ReportDetailPage = ({ reports }: ReportProps) => {
 
     let { nid } = useParams();
-    const toShow = drupalContent.find((item) => item.nid === nid);
+    const toShow = reports.find((item) => item.nid === nid);
 
     if (!toShow) {
         return <p>Loading...</p>

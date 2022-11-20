@@ -3,18 +3,18 @@ import Tile from '../../components/Tile/Tile';
 import { Link } from 'react-router-dom'
 import { Category } from '../../types';
 
-interface DataProps {
+interface CategoryProps {
   categories: Category[]
 }
 
-const HomePage = ({ categories }: DataProps) => {
+const HomePage = ({ categories }: CategoryProps) => {
 
   return (
     <div className={styles.homePageContainer}>
 
       {categories.map((data) =>
       
-        <Link to={`/report/`} key={data.nid}>
+        <Link to={`/report`} key={data.nid}>
           <Tile category={data} />
         </Link>
 
