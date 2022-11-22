@@ -6,11 +6,11 @@ interface DataProps {
 }
 
 const Tile = ({ category }: DataProps) => {
-    
+
     return (
-        <div className={styles.tileStyle}>          
-             <p>{category.title}</p>
-            <p>met ID {category.nid}</p>   
+        <div className={styles.tileStyle}>               
+            <img src={`http://localhost:81/${category.field_img}`} alt={category.title} width="500" height="300" />
+            <p className={styles.text}>{category.title}</p>
         </div>
     );
 }

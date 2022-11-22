@@ -13,7 +13,7 @@ const HomePage = ({ categories }: CategoryProps) => {
     <div className={styles.homePageContainer}>
 
       {categories.map((data) =>
-      
+
         <Link to={`/report/${data.title}`} key={data.nid}>
           <Tile category={data} />
         </Link>

@@ -3,12 +3,16 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;       
-    margin: 1rem 2rem 2rem 0rem;
-    gap: 2.2rem;    
+    gap: 2.2rem;   
+    padding-bottom: 3rem;
 }
 
 .reportContainer {
     background-color: rgb(237, 237, 237);
     border-radius: 5px;
-    padding: 1rem 2rem 2rem 2rem;
+    padding: 1rem 2rem 3rem 2rem;
+}
+
+.back {
+    padding: 2rem 0rem 1.5rem 0rem;
 }

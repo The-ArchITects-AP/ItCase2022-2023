@@ -18,20 +18,25 @@ const ReportOverviewPage = ({ reports }: ReportProps) => {
   }
 
   return (
-    <div className={styles.overviewPageContainer}>
-      {toShow.map((data: IFrame) => {
-        return <div className={styles.reportContainer}>
+    <div>
+      <div className={styles.back}><Link to="/">Back</Link></div>      
 
-          <Link to={`/report/detail/${data.nid}`} key={data.nid}>
-            <h3>{data.title}</h3>
-            <p>ID: {data.nid}</p>
-            <p>Category: {data.field_categorie}</p>
-            <p>Date created: {data.field_date}</p>
-            <iframe src={data.field_iframe} title="Report" width="540" height="350"></iframe>
-          </Link>
+      <div className={styles.overviewPageContainer}>
 
-        </div>
-      })}
+        {toShow.map((data: IFrame) => {
+          return <div className={styles.reportContainer}>
+
+            <Link to={`/report/detail/${data.nid}`} key={data.nid}>
+              <h3>{data.title}</h3>
+              <p>ID: {data.nid}</p>
+              <p>Category: {data.field_categorie}</p>
+              <p>Date created: {data.field_date}</p>
+              <iframe src={data.field_iframe} title="Report" width="540" height="350"></iframe>
+            </Link>
+
+          </div>
+        })}
+      </div>
     </div>
   );
 }
