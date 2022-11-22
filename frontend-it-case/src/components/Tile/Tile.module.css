@@ -5,8 +5,7 @@
 
 .tileStyle > img {
     border-radius: 5px;
-    border: solid 1px lightgray;
-    opacity: 40%;
+    opacity: 35%;
 }
 
 .text {

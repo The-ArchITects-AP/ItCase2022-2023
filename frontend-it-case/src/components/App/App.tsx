@@ -39,7 +39,7 @@ const App = () => {
   }
 
   if (!reportsDrupal || !categoriesDrupal) {
-    return <p>Loading...</p>
+    return <p className={styles.loadingApp}>Loading...</p>
   }
 
   return (

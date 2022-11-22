@@ -31,7 +31,7 @@ const ReportOverviewPage = ({ reports }: ReportProps) => {
               <p>ID: {data.nid}</p>
               <p>Category: {data.field_categorie}</p>
               <p>Date created: {data.field_date}</p>
-              <iframe src={data.field_iframe} title="Report" width="540" height="350"></iframe>
+              <iframe src={data.field_iframe} title="Report" width="500" height="350"></iframe>
             </Link>
 
           </div>
