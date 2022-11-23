@@ -6,14 +6,14 @@ export interface Data {
 
 export interface IFrame {
   nid: string,
-  field_categorie: string,
+  field_report_category: string,
   title: string,
   field_date: string,
   field_iframe: string
 }  
 
 export interface Category {
-  title: string;
   nid: string;
-  field_img: string;
+  title: string; 
+  field_category_image: string;
 }

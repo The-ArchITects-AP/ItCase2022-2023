@@ -19,8 +19,9 @@ const App = () => {
   }, []);
 
   const getDrupalReports = async () => {
-    let response = await fetch('http://localhost:81/drupal/iframes');
+    let response = await fetch('http://drupal-thearchitects.westeurope.cloudapp.azure.com/reports');
     let result = await response.json();
+    
 
     setReportsDrupal(result as IFrame[]);
   }
@@ -32,8 +33,9 @@ const App = () => {
   }, []);
 
   const getDrupalCategories = async () => {
-    let response = await fetch('http://localhost:81/drupal/categories');
+    let response = await fetch('http://drupal-thearchitects.westeurope.cloudapp.azure.com/categories');
     let result = await response.json();
+    console.log(result)
 
     setCategoriesDrupal(result as Category[]);
   }

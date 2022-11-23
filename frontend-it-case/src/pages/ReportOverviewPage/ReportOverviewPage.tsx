@@ -9,7 +9,7 @@ interface ReportProps {
 const ReportOverviewPage = ({ reports }: ReportProps) => {
 
   let { title } = useParams();
-  const toShow: IFrame[] = reports.filter((item) => item.field_categorie === title);
+  const toShow: IFrame[] = reports.filter((item) => item.field_report_category === title);
 
   console.log(toShow);
 
@@ -29,7 +29,7 @@ const ReportOverviewPage = ({ reports }: ReportProps) => {
             <Link to={`/report/detail/${data.nid}`} key={data.nid}>
               <h3>{data.title}</h3>
               <p>ID: {data.nid}</p>
-              <p>Category: {data.field_categorie}</p>
+              <p>Category: {data.field_report_category}</p>
               <p>Date created: {data.field_date}</p>
               <iframe src={data.field_iframe} title="Report" width="500" height="350"></iframe>
             </Link>
