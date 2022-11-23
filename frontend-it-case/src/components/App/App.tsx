@@ -19,7 +19,7 @@ const App = () => {
   }, []);
 
   const getDrupalReports = async () => {
-    let response = await fetch('http://drupal-thearchitects.westeurope.cloudapp.azure.com/reports');
+    let response = await fetch('https://drupal-thearchitects.westeurope.cloudapp.azure.com/reports');
     let result = await response.json();
     
 
@@ -33,7 +33,7 @@ const App = () => {
   }, []);
 
   const getDrupalCategories = async () => {
-    let response = await fetch('http://drupal-thearchitects.westeurope.cloudapp.azure.com/categories');
+    let response = await fetch('https://drupal-thearchitects.westeurope.cloudapp.azure.com/categories');
     let result = await response.json();
     console.log(result)
 
