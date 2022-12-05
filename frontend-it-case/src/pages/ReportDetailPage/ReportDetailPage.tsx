@@ -19,12 +19,10 @@ const ReportDetailPage = ({ reports }: ReportProps) => {
         <div>
             <div className={styles.back}><Link to={`/report/${toShow.field_report_category}`}>Back</Link></div> 
 
-            <div className={styles.detailPageContainer} key={toShow.nid}>
-                <div className={styles.reportContainer} key={toShow.title}>
-                    <h3>{toShow.title}</h3>
+            <div className={styles.reportContainer} key={toShow.nid}>
+                    <p className={styles.title}>{toShow.title}</p>
                     <p>Id: {toShow.nid} | Category: {toShow.field_report_category} | Date: {toShow.field_date}</p>
-                    <iframe src={toShow.field_iframe} title="Report" width="1340" height="540" allowFullScreen={true}></iframe>
-                </div>
+                    <iframe src={toShow.field_iframe} title="Report" width="1270" height="600" allowFullScreen={true}></iframe>
             </div>
         </div>
     );
