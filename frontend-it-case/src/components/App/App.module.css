@@ -3,6 +3,8 @@
   flex-direction: column;
   min-height: 100vh;
   margin: 0rem 2rem;
+  font-family: sans-serif;
+  background-color: rgb(253, 253, 251);
 }
 
 .loadingApp {

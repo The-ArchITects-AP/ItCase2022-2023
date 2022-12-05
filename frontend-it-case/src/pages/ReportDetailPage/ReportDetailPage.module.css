@@ -4,9 +4,13 @@
 }
 
 .reportContainer {
-    background-color: rgb(244, 244, 244);
     border-radius: 5px;
     padding: 1rem 2rem 3rem 2rem;
+}
+
+.title {    
+    font-size: 17px;    
+    font-weight: 600;
 }
 
 .back {

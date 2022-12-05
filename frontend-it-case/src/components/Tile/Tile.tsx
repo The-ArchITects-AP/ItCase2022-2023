@@ -8,9 +8,9 @@ interface DataProps {
 const Tile = ({ category }: DataProps) => {
 
     return (
-        <div className={styles.tileStyle}>               
-            <img src={`https://drupal-thearchitects.westeurope.cloudapp.azure.com${category.field_category_image}`} alt={category.title} width="500" height="300" />
-            <p className={styles.text}>{category.title}</p>
+        <div className={styles.tileStyle}>           
+            <p className={styles.text}>{category.title}</p>    
+            <img src={`https://drupal-thearchitects.westeurope.cloudapp.azure.com${category.field_category_image}`} alt={category.title} width="500" height="250" />
         </div>
     );
 }

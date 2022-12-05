@@ -22,7 +22,7 @@ const ReportDetailPage = ({ reports }: ReportProps) => {
             <div className={styles.detailPageContainer} key={toShow.nid}>
                 <div className={styles.reportContainer} key={toShow.title}>
                     <h3>{toShow.title}</h3>
-                    <p>ID: {toShow.nid} - Category: {toShow.field_report_category} - Date created: {toShow.field_date}</p>
+                    <p>Id: {toShow.nid} | Category: {toShow.field_report_category} | Date: {toShow.field_date}</p>
                     <iframe src={toShow.field_iframe} title="Report" width="1340" height="540" allowFullScreen={true}></iframe>
                 </div>
             </div>
