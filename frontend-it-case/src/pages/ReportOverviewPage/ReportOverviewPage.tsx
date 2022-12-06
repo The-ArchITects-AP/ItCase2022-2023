@@ -27,9 +27,8 @@ const ReportOverviewPage = ({ reports }: ReportProps) => {
           return <div className={styles.reportContainer}>
 
             <Link to={`/report/detail/${data.nid}`} key={data.nid}>
-              <p className={styles.title}>{data.title}</p>
-              <p>Category: {data.field_report_category} | Type of report: {data.field_type_of_report}</p>              
-              <iframe src={data.field_iframe} title="Report" width="500" height="350" allowFullScreen={true}></iframe>
+              <p className={styles.title}>{data.title} | {data.field_type_of_report}</p> 
+              <img src={`https://drupal-thearchitects.westeurope.cloudapp.azure.com${data.field_thumbnail}`} alt={data.title} width="500" height="300" />
             </Link>
 
           </div>

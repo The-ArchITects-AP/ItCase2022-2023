@@ -10,6 +10,7 @@ export interface IFrame {
   title: string;
   field_date: Date;
   field_type_of_report: string;
+  field_thumbnail: string;
   field_iframe: string;
   field_width: string;
   field_height: string;

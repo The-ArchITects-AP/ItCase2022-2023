@@ -12,6 +12,10 @@
     padding: 1rem 2rem 2rem 2rem;
 }
 
+.reportContainer img {
+    border: solid 1px darkgrey;
+}
+
 .title {    
     font-size: 17px;    
     font-weight: 600;
