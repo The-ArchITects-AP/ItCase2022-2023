@@ -28,7 +28,7 @@ const ReportOverviewPage = ({ reports }: ReportProps) => {
 
             <Link to={`/report/detail/${data.nid}`} key={data.nid}>
               <p className={styles.title}>{data.title}</p>
-              <p>Category: {data.field_report_category} | Date: {data.field_date}</p>
+              <p>Category: {data.field_report_category} | Type of report: {data.field_type_of_report}</p>              
               <iframe src={data.field_iframe} title="Report" width="500" height="350" allowFullScreen={true}></iframe>
             </Link>
 

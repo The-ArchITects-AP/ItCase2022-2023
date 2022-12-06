@@ -5,11 +5,14 @@ export interface Data {
 }
 
 export interface IFrame {
-  nid: string,
-  field_report_category: string,
-  title: string,
-  field_date: string,
-  field_iframe: string
+  nid: string;
+  field_report_category: string;
+  title: string;
+  field_date: Date;
+  field_type_of_report: string;
+  field_iframe: string;
+  field_width: string;
+  field_height: string;
 }  
 
 export interface Category {

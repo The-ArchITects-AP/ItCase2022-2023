@@ -12,8 +12,6 @@ const App = () => {
   const [reportsDrupal, setReportsDrupal] = useState<IFrame[]>();
   const [categoriesDrupal, setCategoriesDrupal] = useState<Category[]>();
 
-  //getDrupalReports() haalt rapporten (iFrames) op van locale Drupal in JSON-formaat
-
   useEffect(() => {
     getDrupalReports();
   }, []);
@@ -25,8 +23,6 @@ const App = () => {
 
     setReportsDrupal(result as IFrame[]);
   }
-
-  //getDrupalCategories() haalt de categorieën (HomePage Tiles) op van locale Drupal in JSON-formaat
 
   useEffect(() => {
     getDrupalCategories();
