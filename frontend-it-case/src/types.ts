@@ -12,8 +12,6 @@ export interface IFrame {
   field_type_of_report: string;
   field_thumbnail: string;
   field_iframe: string;
-  field_width: string;
-  field_height: string;
 }  
 
 export interface Category {
