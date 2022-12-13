@@ -17,6 +17,10 @@
       "redirect": "/.auth/logout"
     },
     {
+      "route": "/*",
+      "allowedRoles": ["authenticated"]
+    },
+    {
       "route": "/report/health",
       "allowedRoles": ["health"]
     },
@@ -31,10 +35,6 @@
     {
       "route": "/report/hr",
       "allowedRoles": ["hr"]
-    },
-    {
-      "route": "/*",
-      "allowedRoles": ["authenticated"]
     }
   ],
   "navigationFallback": {
