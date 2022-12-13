@@ -5,7 +5,7 @@
       "redirect": "/.auth/login/aad?post_login_redirect_uri=/home"
     },
     {
-      "route": "/home*",
+      "route": "/*",
       "allowedRoles": ["authenticated"]
     }
   ],

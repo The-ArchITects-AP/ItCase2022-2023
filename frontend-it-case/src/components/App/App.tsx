@@ -4,7 +4,6 @@ import Footer from "../Footer/Footer";
 import HomePage from "../../pages/HomePage/HomePage";
 import ReportOverviewPage from "../../pages/ReportOverviewPage/ReportOverviewPage";
 import ReportDetailPage from "../../pages/ReportDetailPage/ReportDetailPage";
-import InitialPage from "../../pages/InitialPage/InitialPage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Category, IFrame } from "../../types";
@@ -61,11 +60,9 @@ const App = () => {
           />
 
           <Route
-            path="/home"
+            path="/"
             element={<HomePage categories={categoriesDrupal} />}
           />
-
-          <Route path="/" element={<InitialPage />} />
         </Routes>
 
         <Footer />
