@@ -9,24 +9,8 @@ import { useEffect, useState } from "react";
 import { Category, IFrame } from "../../types";
 
 const App = () => {
-  const [roles, setRoles] = useState();
   const [reportsDrupal, setReportsDrupal] = useState<IFrame[]>();
   const [categoriesDrupal, setCategoriesDrupal] = useState<Category[]>();
-
-  useEffect(() => {
-    getRoles();
-  }, []);
-
-  const getRoles = async () => {
-    let response = await fetch(
-      "https://kind-sea-00d89a703-1.westeurope.2.azurestaticapps.net/.auth/me"
-    );
-    let result = await response.json();
-
-    setRoles(result);
-
-    console.log(result);
-  };
 
   useEffect(() => {
     getDrupalReports();
