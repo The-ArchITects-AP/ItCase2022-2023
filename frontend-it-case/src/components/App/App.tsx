@@ -25,7 +25,7 @@ const App = () => {
 
     setRoles(result);
 
-    console.log(roles);
+    console.log(result);
   };
 
   useEffect(() => {
