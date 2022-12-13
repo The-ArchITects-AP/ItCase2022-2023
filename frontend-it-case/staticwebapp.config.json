@@ -35,6 +35,10 @@
     {
       "route": "/report/hr",
       "allowedRoles": ["hr"]
+    },
+    {
+      "route": "/*",
+      "allowedRoles": ["admin"]
     }
   ],
   "navigationFallback": {
