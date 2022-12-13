@@ -5,14 +5,11 @@ import { Category } from "../../types";
 
 interface CategoryProps {
   categories: Category[];
-  roles: any;
 }
 
-const HomePage = ({ categories, roles }: CategoryProps) => {
+const HomePage = ({ categories }: CategoryProps) => {
   return (
     <div className={styles.homePageContainer}>
-      <div>{roles}</div>
-
       {categories.map((data) => (
         <Link to={`/report/${data.title}`} key={data.nid}>
           <Tile category={data} />
