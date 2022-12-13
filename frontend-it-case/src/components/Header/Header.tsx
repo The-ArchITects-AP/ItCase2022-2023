@@ -7,7 +7,8 @@ const Header = () => {
         <a href="/">
           <img src="/LogoTheArchitects.png" alt="Logo The ArchITects" />
         </a>
-        <a href="/login">Login</a>
+        <p>Welcome, user</p>
+        <a href="/.auth/logout">Log out</a>
       </div>
     </div>
   );
