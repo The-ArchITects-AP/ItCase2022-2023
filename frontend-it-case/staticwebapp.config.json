@@ -21,19 +21,19 @@
       "allowedRoles": ["authenticated"]
     },
     {
-      "route": "/report/health",
+      "route": "/report/Health",
       "allowedRoles": ["health"]
     },
     {
-      "route": "/report/engineering",
+      "route": "/report/Engineering",
       "allowedRoles": ["engineering"]
     },
     {
-      "route": "/report/sales",
+      "route": "/report/Sales",
       "allowedRoles": ["sales"]
     },
     {
-      "route": "/report/hr",
+      "route": "/report/HR",
       "allowedRoles": ["hr"]
     },
     {
