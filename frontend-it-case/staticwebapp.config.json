@@ -18,7 +18,7 @@
     },
     {
       "route": "/*",
-      "allowedRoles": ["architect"]
+      "allowedRoles": ["authenticated"]
     }
   ],
   "navigationFallback": {
