@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 import { Category, IFrame } from "../../types";
 
 const App = () => {
-  const [roles, setRoles] = useState();
+  const [roles, setRoles] = useState("nothing");
   const [reportsDrupal, setReportsDrupal] = useState<IFrame[]>();
   const [categoriesDrupal, setCategoriesDrupal] = useState<Category[]>();
 
