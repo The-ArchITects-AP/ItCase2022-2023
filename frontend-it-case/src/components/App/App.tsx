@@ -9,12 +9,23 @@ import { useEffect, useState } from "react";
 import { Category, IFrame } from "../../types";
 
 const App = () => {
+  const [roles, setRoles] = useState();
   const [reportsDrupal, setReportsDrupal] = useState<IFrame[]>();
   const [categoriesDrupal, setCategoriesDrupal] = useState<Category[]>();
 
   useEffect(() => {
+    getRole();
     getDrupalReports();
   }, []);
+
+  const getRole = async () => {
+    let response = await fetch(
+      "https://kind-sea-00d89a703-1.westeurope.2.azurestaticapps.net/.auth/me"
+    );
+    let result = await response.json();
+
+    setRoles(result);
+  };
 
   const getDrupalReports = async () => {
     let response = await fetch(
@@ -61,7 +72,7 @@ const App = () => {
 
           <Route
             path="/"
-            element={<HomePage categories={categoriesDrupal} />}
+            element={<HomePage categories={categoriesDrupal} roles={roles} />}
           />
         </Routes>
 
