@@ -17,6 +17,22 @@
       "redirect": "/.auth/logout"
     },
     {
+      "route": "/report/health",
+      "allowedRoles": ["health"]
+    },
+    {
+      "route": "/report/engineering",
+      "allowedRoles": ["engineering"]
+    },
+    {
+      "route": "/report/sales",
+      "allowedRoles": ["sales"]
+    },
+    {
+      "route": "/report/hr",
+      "allowedRoles": ["hr"]
+    },
+    {
       "route": "/*",
       "allowedRoles": ["authenticated"]
     }
