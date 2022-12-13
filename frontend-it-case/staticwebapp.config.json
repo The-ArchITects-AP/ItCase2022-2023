@@ -3,10 +3,6 @@
     {
       "route": "/login",
       "redirect": "/.auth/login/aad?post_login_redirect_uri=https://kind-sea-00d89a703-1.westeurope.2.azurestaticapps.net/home"
-    },
-    {
-      "route": "/",
-      "redirect": "/login"
     }
   ]
 }
