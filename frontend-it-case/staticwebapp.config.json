@@ -2,7 +2,7 @@
   "routes": [
     {
       "route": "/login",
-      "redirect": "/.auth/login/aad?post_login_redirect_uri=https://kind-sea-00d89a703-1.westeurope.2.azurestaticapps.net/home"
+      "redirect": "/.auth/login/aad?post_login_redirect_uri=/home"
     }
   ]
 }
