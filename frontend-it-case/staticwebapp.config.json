@@ -5,20 +5,20 @@
       "redirect": "/.auth/login/aad?post_login_redirect_uri=/"
     },
     {
-      "route": "/logout",
-      "redirect": "/.auth/logout"
-    },
-    {
-      "route": "/*",
-      "allowedRoles": ["architect"]
-    },
-    {
       "route": "/.auth/login/github",
       "statusCode": 404
     },
     {
       "route": "/.auth/login/twitter",
       "statusCode": 404
+    },
+    {
+      "route": "/logout",
+      "redirect": "/.auth/logout"
+    },
+    {
+      "route": "/*",
+      "allowedRoles": ["architect"]
     }
   ],
   "navigationFallback": {
