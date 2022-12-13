@@ -2,7 +2,7 @@
   "routes": [
     {
       "route": "/login",
-      "redirect": "/.auth/login/aad?post_login_redirect_uri=/home"
+      "redirect": "/.auth/login/aad?post_login_redirect_uri=/"
     },
     {
       "route": "/logout",
