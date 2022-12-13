@@ -5,6 +5,10 @@
       "redirect": "/.auth/login/aad?post_login_redirect_uri=/home"
     },
     {
+      "route": "/logout",
+      "redirect": "/.auth/logout"
+    },
+    {
       "route": "/*",
       "allowedRoles": ["authenticated"]
     }
