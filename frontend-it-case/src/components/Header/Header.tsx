@@ -3,7 +3,7 @@ import { UserData } from "../../types";
 import styles from "./Header.module.css";
 
 const Header = () => {
-  const [userData, setUserData] = useState<UserData[]>();
+  const [userData, setUserData] = useState<UserData>();
 
   useEffect(() => {
     getUserData();
@@ -16,7 +16,7 @@ const Header = () => {
     let result = await response.json();
     console.log(result);
 
-    setUserData(result as UserData[]);
+    setUserData(result as UserData);
   };
 
   return (
@@ -25,7 +25,7 @@ const Header = () => {
         <a href="/">
           <img src="/LogoTheArchitects.png" alt="Logo The ArchITects" />
         </a>
-        <p>Welcome, user</p>
+        <p>Welcome, {userData?.clientPrincipal.userDetails}</p>
         <a href="/logout">Log out</a>
       </div>
     </div>
