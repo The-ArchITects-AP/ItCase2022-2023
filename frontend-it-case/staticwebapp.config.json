@@ -21,20 +21,8 @@
       "allowedRoles": ["authenticated"]
     },
     {
-      "route": "/report/Health",
-      "allowedRoles": ["health"]
-    },
-    {
-      "route": "/report/Engineering",
-      "allowedRoles": ["engineering"]
-    },
-    {
-      "route": "/report/Sales",
-      "allowedRoles": ["sales"]
-    },
-    {
-      "route": "/report/HR",
-      "allowedRoles": ["hr"]
+      "route": "/report/",
+      "allowedRoles": ["report"]
     }
   ],
   "navigationFallback": {
