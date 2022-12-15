@@ -19,3 +19,14 @@ export interface Category {
   title: string; 
   field_category_image: string;
 }
+
+export interface UserData {
+  clientPrincipal: ClientPrincipal;
+}
+
+interface ClientPrincipal {
+  identityProvider: string;
+  userId: string;
+  userDetails: string;
+  userRoles: string[];
+}
