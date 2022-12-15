@@ -10,9 +10,7 @@ const Header = () => {
   }, []);
 
   const getUserData = async () => {
-    let response = await fetch(
-      "https://kind-sea-00d89a703-1.westeurope.2.azurestaticapps.net/.auth/me"
-    );
+    let response = await fetch("/.auth/me");
     let result = await response.json();
     console.log(result);
 
