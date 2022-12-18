@@ -21,7 +21,7 @@ const ReportOverviewPage = ({ reports, userData }: ReportProps) => {
 
   if (
     userData?.clientPrincipal.userRoles.includes(
-      toShow[0].field_report_category
+      toShow[0].field_report_category.toLowerCase()
     )
   ) {
     return (
