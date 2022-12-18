@@ -76,9 +76,7 @@ const App = () => {
 
           <Route
             path="/"
-            element={
-              <HomePage categories={categoriesDrupal} userData={userData} />
-            }
+            element={<HomePage categories={categoriesDrupal} />}
           />
         </Routes>
 
