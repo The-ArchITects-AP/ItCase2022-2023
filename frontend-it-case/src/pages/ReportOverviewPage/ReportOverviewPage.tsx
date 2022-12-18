@@ -59,7 +59,14 @@ const ReportOverviewPage = ({ reports, userData }: ReportProps) => {
     );
   }
 
-  return <div>forbidden</div>;
+  return (
+    <div>
+      <div>forbidden</div>{" "}
+      <div className={styles.back}>
+        <Link to="/">Back</Link>
+      </div>
+    </div>
+  );
 };
 
 export default ReportOverviewPage;
