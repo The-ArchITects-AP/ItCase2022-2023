@@ -1,31 +1,48 @@
-import styles from './ReportDetailPage.module.css';
-import { Link, useParams } from "react-router-dom"
-import { IFrame } from '../../types';
+import styles from "./ReportDetailPage.module.css";
+import { Link, useParams } from "react-router-dom";
+import { IFrame, UserData } from "../../types";
 
 interface ReportProps {
-    reports: IFrame[]
+  reports: IFrame[];
+  userData?: UserData;
 }
 
-const ReportDetailPage = ({ reports }: ReportProps) => {
+const ReportDetailPage = ({ reports, userData }: ReportProps) => {
+  let { nid } = useParams();
+  const toShow = reports.find((item) => item.nid === nid);
 
-    let { nid } = useParams();
-    const toShow = reports.find((item) => item.nid === nid);
+  if (!toShow) {
+    return <p>Loading...</p>;
+  }
 
-    if (!toShow) {
-        return <p>Loading...</p>
-    }
+  console.log(toShow);
 
-    return (
-        <div>
-            <div className={styles.back}><Link to={`/report/${toShow.field_report_category}`}>Back</Link></div> 
+  /*const checkRole = userData?.clientPrincipal.userRoles.includes(
+        toShow.field_report_category.toLowerCase()
+      );*/
 
-            <div className={styles.reportContainer} key={toShow.nid}>
-                    <p className={styles.title}>{toShow.title}</p>
-                    <p>Id: {toShow.nid} | Category: {toShow.field_report_category} | Type of report: {toShow.field_type_of_report}</p>
-                    <iframe src={toShow.field_iframe} title="Report" width="1500" height="500" allowFullScreen={true}></iframe>
-            </div>
-        </div>
-    );
-}
+  return (
+    <div>
+      <div className={styles.back}>
+        <Link to={`/report/${toShow.field_report_category}`}>Back</Link>
+      </div>
+
+      <div className={styles.reportContainer} key={toShow.nid}>
+        <p className={styles.title}>{toShow.title}</p>
+        <p>
+          Id: {toShow.nid} | Category: {toShow.field_report_category} | Type of
+          report: {toShow.field_type_of_report}
+        </p>
+        <iframe
+          src={toShow.field_iframe}
+          title="Report"
+          width="1500"
+          height="500"
+          allowFullScreen={true}
+        ></iframe>
+      </div>
+    </div>
+  );
+};
 
 export default ReportDetailPage;
