@@ -1,21 +1,12 @@
-import { useEffect, useState } from "react";
 import { UserData } from "../../types";
 import styles from "./Header.module.css";
 
-const Header = () => {
-  const [userData, setUserData] = useState<UserData>();
+interface HeaderProps {
+  userData?: UserData;
+}
 
-  useEffect(() => {
-    getUserData();
-  }, []);
+const Header = ({ userData }: HeaderProps) => {
 
-  const getUserData = async () => {
-    let response = await fetch("/.auth/me");
-    let result = await response.json();
-    console.log(result);
-
-    setUserData(result as UserData);
-  };
 
   return (
     <div className={styles.headerContainer}>

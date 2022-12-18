@@ -6,11 +6,24 @@ import ReportOverviewPage from "../../pages/ReportOverviewPage/ReportOverviewPag
 import ReportDetailPage from "../../pages/ReportDetailPage/ReportDetailPage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { Category, IFrame } from "../../types";
+import { Category, IFrame, UserData } from "../../types";
 
 const App = () => {
+  const [userData, setUserData] = useState<UserData>();
   const [reportsDrupal, setReportsDrupal] = useState<IFrame[]>();
   const [categoriesDrupal, setCategoriesDrupal] = useState<Category[]>();
+
+  useEffect(() => {
+    getUserData();
+  }, []);
+
+  const getUserData = async () => {
+    let response = await fetch("/.auth/me");
+    let result = await response.json();
+    console.log(result);
+
+    setUserData(result as UserData);
+  };
 
   useEffect(() => {
     getDrupalReports();
@@ -46,7 +59,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className={styles.appContainer}>
-        <Header />
+        <Header userData={userData} />
 
         <Routes>
           <Route
@@ -56,7 +69,9 @@ const App = () => {
 
           <Route
             path="/report/:title"
-            element={<ReportOverviewPage reports={reportsDrupal} />}
+            element={
+              <ReportOverviewPage reports={reportsDrupal} userData={userData} />
+            }
           />
 
           <Route
