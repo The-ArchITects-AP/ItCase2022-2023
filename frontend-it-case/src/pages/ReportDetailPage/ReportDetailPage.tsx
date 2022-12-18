@@ -17,9 +17,10 @@ const ReportDetailPage = ({ reports, userData }: ReportProps) => {
 
   console.log(toShow);
 
-  const checkRole = userData?.clientPrincipal.userRoles.includes(
-    toShow.field_report_category.toLowerCase()
-  );
+  const checkRole =
+    userData?.clientPrincipal.userRoles.includes(
+      toShow.field_report_category.toLowerCase()
+    ) || userData?.clientPrincipal.userRoles.includes("admin");
 
   if (checkRole) {
     return (

@@ -19,9 +19,10 @@ const ReportOverviewPage = ({ reports, userData }: ReportProps) => {
     return <p>Loading...</p>;
   }
 
-  const checkRole = userData?.clientPrincipal.userRoles.includes(
-    toShow[0].field_report_category.toLowerCase()
-  );
+  const checkRole =
+    userData?.clientPrincipal.userRoles.includes(
+      toShow[0].field_report_category.toLowerCase()
+    ) || userData?.clientPrincipal.userRoles.includes("admin");
 
   if (checkRole) {
     return (
