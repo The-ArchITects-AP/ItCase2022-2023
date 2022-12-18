@@ -69,7 +69,9 @@ const App = () => {
 
           <Route
             path="/report/:title"
-            element={<ReportOverviewPage reports={reportsDrupal} />}
+            element={
+              <ReportOverviewPage reports={reportsDrupal} userData={userData} />
+            }
           />
 
           <Route
