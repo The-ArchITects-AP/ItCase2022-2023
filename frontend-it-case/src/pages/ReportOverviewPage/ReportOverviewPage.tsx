@@ -19,7 +19,7 @@ const ReportOverviewPage = ({ reports, userData }: ReportProps) => {
     return <p>Loading...</p>;
   }
 
-  if (reports) {
+  if (toShow) {
     const checkRole =
       userData?.clientPrincipal.userRoles.includes(
         toShow[0].field_report_category.toLowerCase()
