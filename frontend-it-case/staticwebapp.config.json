@@ -19,10 +19,6 @@
     {
       "route": "/",
       "allowedRoles": ["authenticated"]
-    },
-    {
-      "route": "/report*",
-      "allowedRoles": ["report"]
     }
   ],
   "navigationFallback": {
