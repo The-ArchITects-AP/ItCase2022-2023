@@ -17,29 +17,40 @@ const ReportDetailPage = ({ reports, userData }: ReportProps) => {
 
   console.log(toShow);
 
-  /*const checkRole = userData?.clientPrincipal.userRoles.includes(
-        toShow.field_report_category.toLowerCase()
-      );*/
+  const checkRole = userData?.clientPrincipal.userRoles.includes(
+    toShow.field_report_category.toLowerCase()
+  );
+
+  if (checkRole) {
+    return (
+      <div>
+        <div className={styles.back}>
+          <Link to={`/report/${toShow.field_report_category}`}>Back</Link>
+        </div>
+
+        <div className={styles.reportContainer} key={toShow.nid}>
+          <p className={styles.title}>{toShow.title}</p>
+          <p>
+            Id: {toShow.nid} | Category: {toShow.field_report_category} | Type
+            of report: {toShow.field_type_of_report}
+          </p>
+          <iframe
+            src={toShow.field_iframe}
+            title="Report"
+            width="1500"
+            height="500"
+            allowFullScreen={true}
+          ></iframe>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div>
+      <div>forbidden</div>{" "}
       <div className={styles.back}>
         <Link to={`/report/${toShow.field_report_category}`}>Back</Link>
-      </div>
-
-      <div className={styles.reportContainer} key={toShow.nid}>
-        <p className={styles.title}>{toShow.title}</p>
-        <p>
-          Id: {toShow.nid} | Category: {toShow.field_report_category} | Type of
-          report: {toShow.field_type_of_report}
-        </p>
-        <iframe
-          src={toShow.field_iframe}
-          title="Report"
-          width="1500"
-          height="500"
-          allowFullScreen={true}
-        ></iframe>
       </div>
     </div>
   );
