@@ -20,7 +20,6 @@ const App = () => {
   const getUserData = async () => {
     let response = await fetch("/.auth/me");
     let result = await response.json();
-    console.log(result);
 
     setUserData(result as UserData);
   };
@@ -47,7 +46,6 @@ const App = () => {
       "https://drupal-thearchitects.westeurope.cloudapp.azure.com/categories"
     );
     let result = await response.json();
-    console.log(result);
 
     setCategoriesDrupal(result as Category[]);
   };
