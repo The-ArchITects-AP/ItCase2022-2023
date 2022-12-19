@@ -64,7 +64,7 @@ const App = () => {
         <Routes>
           <Route
             path="/report/detail/:nid"
-            element={<ReportDetailPage reports={reportsDrupal} />}
+            element={<ReportDetailPage reports={reportsDrupal} userData={userData} />}
           />
 
           <Route
