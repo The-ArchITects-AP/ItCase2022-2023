@@ -57,6 +57,8 @@ const ReportDetailPage = ({ reports, userData }: ReportProps) => {
       </div>
     );
   }
+
+  return <div>empty</div>;
 };
 
 export default ReportDetailPage;
