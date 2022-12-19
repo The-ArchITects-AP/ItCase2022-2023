@@ -50,7 +50,7 @@ const ReportOverviewPage = ({ reports, userData }: ReportProps) => {
                       {data.title} | {data.field_type_of_report}
                     </p>
                     <img
-                        src={`https://screenshot.abstractapi.com/v1/?api_key=142b1ca286734bc6a187dfa5e45376e5&url=${data.field_iframe}`}
+                        src={`https://screenshot.abstractapi.com/v1/?api_key=142b1ca286734bc6a187dfa5e45376e5&url=${data.field_iframe}&delay=10`}
                         //src={`https://api.apiflash.com/v1/urltoimage?access_key=ad6f7c37ed5d4f3d9f42d09dcbcd4365&wait_until=page_loaded&url=${data.field_iframe}&delay=10`}
                       alt=""
                       width="500"
