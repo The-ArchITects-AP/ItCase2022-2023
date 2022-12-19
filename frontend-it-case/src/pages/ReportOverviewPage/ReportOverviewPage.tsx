@@ -26,6 +26,15 @@ const ReportOverviewPage = ({ reports, userData }: ReportProps) => {
       ) || userData?.clientPrincipal.userRoles.includes("admin");
 
     if (checkRole) {
+        const encodeFieldIframeUrl = (url: string) =>
+        {
+            let encodedUrl=escape(url);
+            encodedUrl=encodedUrl.replace("+", "%2B");
+            encodedUrl=encodedUrl.replace("/", "%2F");
+            console.log(encodedUrl)
+            return encodedUrl
+        }
+
       return (
         <div>
           <div className={styles.back}>
@@ -41,7 +50,7 @@ const ReportOverviewPage = ({ reports, userData }: ReportProps) => {
                       {data.title} | {data.field_type_of_report}
                     </p>
                     <img
-                        src={`http://api.screenshotlayer.com/api/capture?95aedceffcd1178017db59c46da59a35&url=${data.field_iframe}`}
+                        src={`http://api.screenshotlayer.com/api/capture?95aedceffcd1178017db59c46da59a35&url=${encodeFieldIframeUrl(data.field_iframe)}`}
                         //src={`https://api.apiflash.com/v1/urltoimage?access_key=ad6f7c37ed5d4f3d9f42d09dcbcd4365&wait_until=page_loaded&url=${data.field_iframe}&delay=10`}
                       alt=""
                       width="500"
