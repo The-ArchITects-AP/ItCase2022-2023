@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb92b89b-8e92-41e3-b698-2365db93d0af" name="Changes" comment="changes api">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="bb92b89b-8e92-41e3-b698-2365db93d0af" name="Changes" comment="adds delay">
       <change beforePath="$PROJECT_DIR$/frontend-it-case/src/pages/ReportOverviewPage/ReportOverviewPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-it-case/src/pages/ReportOverviewPage/ReportOverviewPage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,7 +52,7 @@
       <option name="presentableId" value="Default" />
       <updated>1671044570888</updated>
       <workItem from="1671044573078" duration="17000" />
-      <workItem from="1671474303857" duration="2544000" />
+      <workItem from="1671474303857" duration="2888000" />
     </task>
     <task id="LOCAL-00001" summary="adds .gitignore">
       <created>1671473747787</created>
@@ -97,7 +96,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671476400538</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="adds delay">
+      <created>1671476876199</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1671476876199</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,6 +116,7 @@
     <MESSAGE value="change screenshot src (not working yet)" />
     <MESSAGE value="encodes iframe url" />
     <MESSAGE value="changes api" />
-    <option name="LAST_COMMIT_MESSAGE" value="changes api" />
+    <MESSAGE value="adds delay" />
+    <option name="LAST_COMMIT_MESSAGE" value="adds delay" />
   </component>
 </project>
