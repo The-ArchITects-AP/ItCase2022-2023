@@ -40,12 +40,14 @@ const ReportOverviewPage = ({ reports, userData }: ReportProps) => {
                     <p className={styles.title}>
                       {data.title} | {data.field_type_of_report}
                     </p>
-                    <img
+                      {/*
+                      <img
                       src={`https://api.apiflash.com/v1/urltoimage?access_key=ad6f7c37ed5d4f3d9f42d09dcbcd4365&wait_until=page_loaded&url=${data.field_iframe}&delay=10`}
                       alt=""
                       width="500"
                       height="300"
                     />
+                      */}
                     <img
                       src={`https://drupal-thearchitects.westeurope.cloudapp.azure.com${data.field_thumbnail}`}
                       alt={data.title}

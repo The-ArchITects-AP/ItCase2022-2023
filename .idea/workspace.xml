@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b5b1ca1-b35a-4496-ab45-b988a06a5c40" name="Changes" comment="" />
+    <list default="true" id="0b5b1ca1-b35a-4496-ab45-b988a06a5c40" name="Changes" comment="encodes iframe url">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-it-case/src/pages/ReportOverviewPage/ReportOverviewPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-it-case/src/pages/ReportOverviewPage/ReportOverviewPage.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,6 +30,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "C:/Users/qincl/Documents/College/Year-3/footballapp",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "ts.external.directory.path": "C:\\Users\\qincl\\Documents\\College\\Year-3\\ItCase2022-2023\\frontend-it-case\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
