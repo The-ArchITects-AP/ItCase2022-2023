@@ -31,7 +31,6 @@ const App = () => {
 
   const getDrupalReports = async () => {
     let response = await fetch(
-      // "https://drupal-thearchitects.westeurope.cloudapp.azure.com/reports"
       "https://drupal.the-architects.online/reports"
     );
     let result = await response.json();
@@ -45,7 +44,6 @@ const App = () => {
 
   const getDrupalCategories = async () => {
     let response = await fetch(
-      // "https://drupal-thearchitects.westeurope.cloudapp.azure.com/categories"
       "https://drupal.the-architects.online/categories"
     );
     let result = await response.json();
