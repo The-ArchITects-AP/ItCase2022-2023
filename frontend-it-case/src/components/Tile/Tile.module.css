@@ -1,33 +1,56 @@
-.tileStyle {
+.tileContainer {
     position: relative;
-    text-align: center;
-    border: solid 1px lightgrey;  
-    border-radius: 6px;
-}
-
-.tileStyle > img {
-    border-radius: 6px;
-    padding: 0.2rem 1.5rem 1.5rem 1.5rem;
-}
-
-.text {
-    padding-top: 0.5rem;
-    font-weight: 600;
-    letter-spacing: 1px;
-}
-
-a:link {
+    display: block;
+    height: 100%;  
+    border-radius: calc(10 * 1px);
+    overflow: hidden;
     text-decoration: none;
 }
 
-a:visited {
-    text-decoration: none;
+.tileImage {
+    width: 500px;
+    height: 270px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
-a:hover {
-    text-decoration:none;
+.tileOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;      
+  border-radius: calc(10 * 1px);    
+  background-color: #fff;      
+  transform: translateY(100%);
+  transition: .2s ease-in-out;
 }
 
-a:active {
-    text-decoration: none;
+.tileContainer:hover .tileOverlay {
+    transform: translateY(0);
 }
+
+.tileHeader {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 1rem 0 1rem 2rem;
+    border-radius: calc(10 * 1px);    
+    background-color: #fff;    
+    transform: translateY(-100%);
+    transition: .2s ease-in-out;
+    font-weight: bold;
+    font-size: 12pt;
+    letter-spacing: 0.1rem;
+}
+
+.tileContainer:hover .tileHeader {
+    transform: translateY(0);
+}
+
+.tileDescription {
+    padding: 0 0 2rem 2rem;
+    margin: 0;
+    overflow: hidden;
+    font-size: 11.5pt;
+}    

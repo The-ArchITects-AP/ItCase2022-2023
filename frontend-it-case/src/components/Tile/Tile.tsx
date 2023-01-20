@@ -1,4 +1,4 @@
-import { Category, Data } from '../../types';
+import { Category } from '../../types';
 import styles from './Tile.module.css';
 
 interface DataProps {
@@ -8,9 +8,15 @@ interface DataProps {
 const Tile = ({ category }: DataProps) => {
 
     return (
-        <div className={styles.tileStyle}>           
-            <p className={styles.text}>{category.title}</p>    
-            <img src={`https://drupal-thearchitects.westeurope.cloudapp.azure.com${category.field_category_image}`} alt={category.title} width="500" height="250" />
+        <div className={styles.tileContainer}>
+            <img className={styles.tileImage} src={`https://drupal-thearchitects.westeurope.cloudapp.azure.com${category.field_category_image}`} alt={category.title} />
+            <div className={styles.tileOverlay}>
+                <div className={styles.tileHeader}>
+                    <p>{category.title}</p>
+                </div>
+                {/* kunnen eventueel description field meegeven via Drupal API */}
+                <p className={styles.tileDescription}>View {category.title} reports</p>
+            </div>
         </div>
     );
 }
