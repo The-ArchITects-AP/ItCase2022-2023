@@ -2,6 +2,7 @@ import styles from "./ReportOverviewPage.module.css";
 import { IFrame, UserData } from "../../types";
 import { Link, useParams } from "react-router-dom";
 import ForbiddenPage from "../ForbiddenPage/ForbiddenPage";
+import NoContentPage from "../NoContentPage/NoContentPage";
 
 interface ReportProps {
   reports: IFrame[];
@@ -41,7 +42,7 @@ const ReportOverviewPage = ({ reports, userData }: ReportProps) => {
                     <p className={styles.title}>
                       {data.title} | {data.field_type_of_report}
                     </p>
-                      {/*
+                    {/*
                       <img
                       src={`https://api.apiflash.com/v1/urltoimage?access_key=ad6f7c37ed5d4f3d9f42d09dcbcd4365&wait_until=page_loaded&url=${data.field_iframe}&delay=10`}
                       alt=""
@@ -73,7 +74,16 @@ const ReportOverviewPage = ({ reports, userData }: ReportProps) => {
       </div>
     );
   }
-  return <div>empty</div>;
+
+  return (
+    <div>
+      <div className={styles.back}>
+        <Link to="/">Back</Link>
+      </div>
+      <NoContentPage />
+    </div>
+  );
+
 };
 
 export default ReportOverviewPage;
