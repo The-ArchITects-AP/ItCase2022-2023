@@ -1,13 +1,28 @@
 .headerContainer {
+    display: flex;
+    flex-direction: row;
     max-width: 100%;
-    padding: 2rem 0rem;
+    padding: 0.8rem 3rem;
+    justify-content: space-between;
+    border-bottom: solid 1px rgb(208, 207, 207);
 }
 
 .logoContainer {
-    width: 20%;
+    max-width: 50%;
 }
 
 .logoContainer img {
-    width: 200px;
-    height: auto;
+    width: 220px;
+    padding-top: 0.7rem;
+}
+
+.userContainer {
+    display: flex;
+    gap: 3rem;
+    font-size: 13pt;
+}
+
+.userContainer a {
+    margin-top: 1rem;
+    font-weight: bold;
 }
