@@ -5,11 +5,12 @@
     border-radius: calc(10 * 1px);
     overflow: hidden;
     text-decoration: none;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .tileImage {
     width: 500px;
-    height: 270px;
+    height: 280px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 }

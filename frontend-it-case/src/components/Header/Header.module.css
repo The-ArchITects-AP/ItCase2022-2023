@@ -4,7 +4,7 @@
     max-width: 100%;
     padding: 0.8rem 3rem;
     justify-content: space-between;
-    border-bottom: solid 1px rgb(208, 207, 207);
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
 }
 
 .logoContainer {
