@@ -1,6 +1,7 @@
 import styles from "./ReportOverviewPage.module.css";
 import { IFrame, UserData } from "../../types";
 import { Link, useParams } from "react-router-dom";
+import ForbiddenPage from "../ForbiddenPage/ForbiddenPage";
 
 interface ReportProps {
   reports: IFrame[];
@@ -65,10 +66,10 @@ const ReportOverviewPage = ({ reports, userData }: ReportProps) => {
 
     return (
       <div>
-        <div>forbidden</div>{" "}
         <div className={styles.back}>
           <Link to="/">Back</Link>
         </div>
+        <ForbiddenPage />
       </div>
     );
   }

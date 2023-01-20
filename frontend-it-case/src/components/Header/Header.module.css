@@ -19,7 +19,7 @@
 .userContainer {
     display: flex;
     gap: 3rem;
-    font-size: 13pt;
+    font-size: 12pt;
 }
 
 .userContainer a {
