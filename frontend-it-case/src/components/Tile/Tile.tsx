@@ -9,7 +9,7 @@ const Tile = ({ category }: DataProps) => {
 
     return (
         <div className={styles.tileContainer}>
-            <img className={styles.tileImage} src={`https://drupal-thearchitects.westeurope.cloudapp.azure.com${category.field_category_image}`} alt={category.title} />
+            <img className={styles.tileImage} src={`https://drupal.the-architects.online${category.field_category_image}`} alt={category.title} />
             <div className={styles.tileOverlay}>
                 <div className={styles.tileHeader}>
                     <p>{category.title}</p>
