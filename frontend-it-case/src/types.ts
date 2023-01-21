@@ -1,9 +1,3 @@
-export interface Data {
-  id: string,
-  title: string,
-  img: string
-}
-
 export interface IFrame {
   nid: string;
   field_report_category: string;

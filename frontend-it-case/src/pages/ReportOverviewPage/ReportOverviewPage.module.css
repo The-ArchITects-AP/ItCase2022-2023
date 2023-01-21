@@ -4,10 +4,11 @@
     flex-wrap: wrap;       
     gap: 3.5rem;   
     padding-bottom: 3rem;
+    margin: 0 3rem;
 }
 
 .reportContainer {
-    padding: 2rem 2rem 2rem 2rem;
+    padding-bottom: 2rem;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -21,6 +22,7 @@
 .title {    
     font-size: 17px;    
     font-weight: 600;
+    padding-left: 2rem;
 }
 
 .back {
