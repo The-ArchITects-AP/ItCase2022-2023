@@ -61,9 +61,8 @@ const ReportOverviewPage = ({ reports, userData }: ReportProps) => {
                         }
                       </div>
                       <div>
-                        <p className={styles.title}>
-                          {data.title} | {data.field_type_of_report}
-                        </p>
+                        <p className={styles.title}>{data.title}</p>
+                        <p>{data.field_type_of_report} | {data.field_report_category}</p>
                       </div>
                     </div>
                   </Link>
