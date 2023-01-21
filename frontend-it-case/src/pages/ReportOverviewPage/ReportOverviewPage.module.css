@@ -9,7 +9,7 @@
 
 .reportContainer {
     padding-bottom: 1rem;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
@@ -27,18 +27,12 @@
 .reportIcon {
     width: 40px;
     height: 40px;
-    padding-left: 1rem;
-    padding-top: 1rem;
-}
-
-.text {
-    padding-left: 1rem;
+    padding: 1rem 1rem 0 1rem;
 }
 
 .title {    
-    font-size: 17px;    
-    font-weight: 600;
-    padding-left: 1.5rem;
+    font-size: 13pt;    
+    font-weight: bold;
 }
 
 .back {
