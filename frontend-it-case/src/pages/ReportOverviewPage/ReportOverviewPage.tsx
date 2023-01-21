@@ -106,7 +106,7 @@ const ReportOverviewPage = ({ reports, userData }: ReportProps) => {
                       </div>
                       <div className={styles.text}>
                         <p className={styles.title}>{data.title}</p>
-                        <p>{data.field_type_of_report} | {data.field_report_category}</p>
+                        <p>Added on: {data.field_date}</p>
                       </div>
                     </div>
                   </Link>
