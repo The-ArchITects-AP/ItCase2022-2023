@@ -92,7 +92,7 @@ const ReportOverviewPage = ({ reports, userData }: ReportProps) => {
                     />
                       */}
                     <img
-                      src={`https://drupal-thearchitects.westeurope.cloudapp.azure.com${data.field_thumbnail}`}
+                      src={`https://drupal.the-architects.online${data.field_thumbnail}`}
                       alt={data.title}
                       width="500"
                       height="300"
