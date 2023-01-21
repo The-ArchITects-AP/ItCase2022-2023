@@ -3,9 +3,9 @@
     max-width: 85%;
     flex-direction: row;
     flex-wrap: wrap;
-    align-content: center;
-    padding-top: 2.5rem;
+    padding-top: 4rem;
     gap: 3.5rem;
     margin: auto;
+    padding-bottom: 3rem;
 }
 

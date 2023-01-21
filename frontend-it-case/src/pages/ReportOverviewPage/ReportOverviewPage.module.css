@@ -5,13 +5,13 @@
     max-width: 85%;
     gap: 3.5rem;   
     margin: auto;
+    padding-bottom: 3rem;
 }
 
 .reportContainer {
-    padding-bottom: 1rem;
+    padding-bottom: 0.6rem;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-radius: 10px;
 }
 
 .reportContainer img {  
@@ -27,14 +27,20 @@
 .reportIcon {
     width: 40px;
     height: 40px;
-    padding: 1rem 1rem 0 1rem;
+    padding: 1rem 1rem 0 1.5rem;
+    margin-top: 0.3rem;
+}
+
+.text {
+    margin-top: 0.2rem;
 }
 
 .title {    
     font-size: 13pt;    
     font-weight: bold;
+    margin-bottom: -0.7rem;
 }
 
 .back {
-    padding: 2rem 0rem 1.5rem 3rem;
+    padding: 3rem;
 }
