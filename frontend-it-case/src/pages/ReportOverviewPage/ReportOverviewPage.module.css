@@ -2,8 +2,9 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;       
+    max-width: 85%;
     gap: 3.5rem;   
-    margin: 1rem 3rem 0 3rem;
+    margin: auto;
 }
 
 .reportContainer {
@@ -18,9 +19,14 @@
     border-top-right-radius: 10px;
 }
 
-.info {
+.reportInfo {
     display: flex;
     flex-direction: row;
+}
+
+.reportIcon {
+    width: 70px;
+    height: 70px;
 }
 
 .title {    
