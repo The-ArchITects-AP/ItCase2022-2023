@@ -38,7 +38,7 @@ const ReportOverviewPage = ({ reports, userData }: ReportProps) => {
             {toShow.map((data: IFrame) => {
               return (
                 <div className={styles.reportContainer}>
-                  <Link to={`/report/detail/${data.nid}`} key={data.nid}>                    
+                  <Link to={`/report/detail/${data.nid}`} key={data.nid}>
                     {/*
                       <img
                       src={`https://api.apiflash.com/v1/urltoimage?access_key=ad6f7c37ed5d4f3d9f42d09dcbcd4365&wait_until=page_loaded&url=${data.field_iframe}&delay=10`}
@@ -53,9 +53,19 @@ const ReportOverviewPage = ({ reports, userData }: ReportProps) => {
                       width="500"
                       height="300"
                     />
-                    <p className={styles.title}>
-                      {data.title} | {data.field_type_of_report}
-                    </p>
+                    <div className={styles.info}>
+                      <div>
+                        {data.field_type_of_report.toLowerCase() === "tableau" ?
+                          <img src="../../public/TableauLogo.png" alt="logo Tableau" /> :
+                          <img src="../../public/PowerBILogo.png" alt="logo Power BI" />
+                        }
+                      </div>
+                      <div>
+                        <p className={styles.title}>
+                          {data.title} | {data.field_type_of_report}
+                        </p>
+                      </div>
+                    </div>
                   </Link>
                 </div>
               );

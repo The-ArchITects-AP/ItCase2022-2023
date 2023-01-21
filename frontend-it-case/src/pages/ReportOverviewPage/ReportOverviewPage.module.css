@@ -3,12 +3,11 @@
     flex-direction: row;
     flex-wrap: wrap;       
     gap: 3.5rem;   
-    padding-bottom: 3rem;
-    margin: 0 3rem;
+    margin: 1rem 3rem 0 3rem;
 }
 
 .reportContainer {
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -17,6 +16,11 @@
 .reportContainer img {  
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
 }
 
 .title {    
