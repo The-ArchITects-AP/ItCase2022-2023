@@ -38,10 +38,7 @@ const ReportOverviewPage = ({ reports, userData }: ReportProps) => {
             {toShow.map((data: IFrame) => {
               return (
                 <div className={styles.reportContainer}>
-                  <Link to={`/report/detail/${data.nid}`} key={data.nid}>
-                    <p className={styles.title}>
-                      {data.title} | {data.field_type_of_report}
-                    </p>
+                  <Link to={`/report/detail/${data.nid}`} key={data.nid}>                    
                     {/*
                       <img
                       src={`https://api.apiflash.com/v1/urltoimage?access_key=ad6f7c37ed5d4f3d9f42d09dcbcd4365&wait_until=page_loaded&url=${data.field_iframe}&delay=10`}
@@ -56,6 +53,9 @@ const ReportOverviewPage = ({ reports, userData }: ReportProps) => {
                       width="500"
                       height="300"
                     />
+                    <p className={styles.title}>
+                      {data.title} | {data.field_type_of_report}
+                    </p>
                   </Link>
                 </div>
               );

@@ -1,20 +1,21 @@
 .overviewPageContainer {
-    flex: 1;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;       
-    gap: 1rem;   
+    gap: 3.5rem;   
     padding-bottom: 3rem;
-    margin: 0 3rem;
 }
 
 .reportContainer {
-    border-radius: 5px;
-    padding: 1rem 2rem 2rem 2rem;
+    padding: 2rem 2rem 2rem 2rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
-.reportContainer img {
-    border: solid 1px darkgrey;
+.reportContainer img {  
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .title {    
