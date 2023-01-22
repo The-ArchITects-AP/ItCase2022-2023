@@ -88,9 +88,9 @@ const ReportOverviewPage = ({ reports, userData }: ReportProps) => {
                     />
                     <div className={styles.reportInfo}>
                       <div>
-                        {data.field_type_of_report.toLowerCase() === "tableau" ?
+                        {data.field_type_of_report.toLowerCase().trim() === "tableau" ?
                           <img className={styles.reportIcon} src="/Tableau.svg" alt="Tableau icon" /> :
-                          data.field_type_of_report.toLowerCase() === "power bi" ?
+                          data.field_type_of_report.toLowerCase().trim() === "power bi" ?
                             <img className={styles.reportIcon} src="/PowerBI.png" alt="Power BI icon" /> :
                             <img className={styles.reportIcon} src="/DefaultIcon.png" alt="Default icon" />
                         }
