@@ -48,6 +48,7 @@
 
 .back {
     padding: 3rem 3rem 4rem 3rem;
+    font-size: 13.5pt;
 }
 
 @media all and (max-width:1100px) {

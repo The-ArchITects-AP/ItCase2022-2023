@@ -4,39 +4,6 @@ import { Link, useParams } from "react-router-dom";
 import ForbiddenPage from "../ForbiddenPage/ForbiddenPage";
 import NoContentPage from "../NoContentPage/NoContentPage";
 
-//Tijdelijke data voor CSS
-//Drupal data niet zichtbaar op localhost
-
-// const reportsTemporary = [
-//   {
-//     nid: "14",
-//     field_report_category: "Engineering",
-//     title: "COVID",
-//     field_date: "2022-03-25",
-//     field_type_of_report: "Power Bi ",
-//     field_thumbnail: "",
-//     field_iframe: "https://app.powerbi.com/view?r=eyJrIjoiYjA1YzhhMjItMWU1ZS00YmRiLWI3MjUtZDVhN2ZlMzY4NjFlIiwidCI6IjJjOTJmZjI0LWI0MmMtNDgwZC1iNzRkLTY2ZmNlNzZiZDdkYSIsImMiOjl9"
-//   },
-//   {
-//     nid: "12",
-//     field_report_category: "Engineering",
-//     title: "COVID",
-//     field_date: "2022-03-25",
-//     field_type_of_report: "Power Bi ",
-//     field_thumbnail: "/sites/default/files/2022-12/Covid_Thumbnail_3.jpg",
-//     field_iframe: "https://app.powerbi.com/view?r=eyJrIjoiYjA1YzhhMjItMWU1ZS00YmRiLWI3MjUtZDVhN2ZlMzY4NjFlIiwidCI6IjJjOTJmZjI0LWI0MmMtNDgwZC1iNzRkLTY2ZmNlNzZiZDdkYSIsImMiOjl9"
-//   },
-//   {
-//     nid: "8",
-//     field_report_category: "Engineering",
-//     title: "The Rat Pack",
-//     field_date: "2022-03-25",
-//     field_type_of_report: "Tableau",
-//     field_thumbnail: "/sites/default/files/2022-12/RatPack_Thumbnail_1.jpg",
-//     field_iframe: "https://public.tableau.com/views/RunningWiththePack/RunningwiththePack?:showVizHome=no&:embed=true&:language=en-US&:display_count=n&:origin=viz_share_link&:auto_resize=yes"
-//   }
-// ]
-
 interface ReportProps {
   reports: IFrame[];
   userData?: UserData;
@@ -60,13 +27,11 @@ const ReportOverviewPage = ({ reports, userData }: ReportProps) => {
         toShow[0].field_report_category.toLowerCase()
       ) || userData?.clientPrincipal.userRoles.includes("admin");
 
-    // const checkRole = true;
-
     if (checkRole) {
       return (
         <div>
           <div className={styles.back}>
-            <Link to="/">Back</Link>
+            <Link to="/">{`[ back ]`}</Link>
           </div>
 
           <div className={styles.overviewPageContainer}>
@@ -112,7 +77,7 @@ const ReportOverviewPage = ({ reports, userData }: ReportProps) => {
     return (
       <div>
         <div className={styles.back}>
-          <Link to="/">Back</Link>
+          <Link to="/">{`[ back ]`}</Link>
         </div>
         <ForbiddenPage />
       </div>
@@ -122,7 +87,7 @@ const ReportOverviewPage = ({ reports, userData }: ReportProps) => {
   return (
     <div>
       <div className={styles.back}>
-        <Link to="/">Back</Link>
+        <Link to="/">{`[ back ]`}</Link>
       </div>
       <NoContentPage />
     </div>
