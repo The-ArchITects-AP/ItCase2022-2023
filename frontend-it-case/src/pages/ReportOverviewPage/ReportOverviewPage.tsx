@@ -16,8 +16,8 @@ import NoContentPage from "../NoContentPage/NoContentPage";
 //     field_type_of_report: "Power Bi ",
 //     field_thumbnail: "",
 //     field_iframe: "https://app.powerbi.com/view?r=eyJrIjoiYjA1YzhhMjItMWU1ZS00YmRiLWI3MjUtZDVhN2ZlMzY4NjFlIiwidCI6IjJjOTJmZjI0LWI0MmMtNDgwZC1iNzRkLTY2ZmNlNzZiZDdkYSIsImMiOjl9"
-//     },
-//     {
+//   },
+//   {
 //     nid: "12",
 //     field_report_category: "Engineering",
 //     title: "COVID",
@@ -25,8 +25,8 @@ import NoContentPage from "../NoContentPage/NoContentPage";
 //     field_type_of_report: "Power Bi ",
 //     field_thumbnail: "/sites/default/files/2022-12/Covid_Thumbnail_3.jpg",
 //     field_iframe: "https://app.powerbi.com/view?r=eyJrIjoiYjA1YzhhMjItMWU1ZS00YmRiLWI3MjUtZDVhN2ZlMzY4NjFlIiwidCI6IjJjOTJmZjI0LWI0MmMtNDgwZC1iNzRkLTY2ZmNlNzZiZDdkYSIsImMiOjl9"
-//     },
-//     {
+//   },
+//   {
 //     nid: "8",
 //     field_report_category: "Engineering",
 //     title: "The Rat Pack",
@@ -34,7 +34,7 @@ import NoContentPage from "../NoContentPage/NoContentPage";
 //     field_type_of_report: "Tableau",
 //     field_thumbnail: "/sites/default/files/2022-12/RatPack_Thumbnail_1.jpg",
 //     field_iframe: "https://public.tableau.com/views/RunningWiththePack/RunningwiththePack?:showVizHome=no&:embed=true&:language=en-US&:display_count=n&:origin=viz_share_link&:auto_resize=yes"
-//     }
+//   }
 // ]
 
 interface ReportProps {
@@ -89,8 +89,10 @@ const ReportOverviewPage = ({ reports, userData }: ReportProps) => {
                     <div className={styles.reportInfo}>
                       <div>
                         {data.field_type_of_report.toLowerCase() === "tableau" ?
-                          <img className={styles.reportIcon} src="/Tableau.svg" alt="logo Tableau" /> :
-                          <img className={styles.reportIcon} src="/PowerBI.png" alt="logo Power BI" />
+                          <img className={styles.reportIcon} src="/Tableau.svg" alt="Tableau icon" /> :
+                          data.field_type_of_report.toLowerCase() === "power bi" ?
+                            <img className={styles.reportIcon} src="/PowerBI.png" alt="Power BI icon" /> :
+                            <img className={styles.reportIcon} src="/DefaultIcon.png" alt="Default icon" />
                         }
                       </div>
                       <div className={styles.text}>
