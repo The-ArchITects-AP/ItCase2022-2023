@@ -2,7 +2,7 @@
     width: 85%;
     padding: 1rem;
     margin: auto;
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
 }
 
 .title {
@@ -23,4 +23,34 @@
 
 .back {
     padding: 3rem 3rem 2rem 3rem;
+}
+
+@media all and (max-width:1100px) {      
+    .iframe {
+        height: 600px;
+    }
+}
+
+@media all and (max-width:800px) {       
+    .title {
+        font-size: 17px;
+    }
+
+    .iframe {
+        height: 500px;
+    }
+}
+
+@media all and (max-width:500px) { 
+    .title {
+        font-size: 15px;
+    }
+
+    .text {
+        font-size: 10.5pt;
+    }
+
+    .iframe {
+        height: 300px;
+    }
 }

@@ -76,17 +76,15 @@ const ReportOverviewPage = ({ reports, userData }: ReportProps) => {
                   <Link to={`/report/detail/${data.nid}`} key={data.nid}>
                     {/*
                       <img
+                      className={styles.reportImage}
                       src={`https://api.apiflash.com/v1/urltoimage?access_key=ad6f7c37ed5d4f3d9f42d09dcbcd4365&wait_until=page_loaded&url=${data.field_iframe}&delay=10`}
                       alt=""
-                      width="500"
-                      height="300"
                     />
                       */}
                     <img
+                      className={styles.reportImage}
                       src={`https://drupal.the-architects.online${data.field_thumbnail}`}
                       alt={data.title}
-                      width="500"
-                      height="300"
                     />
                     <div className={styles.reportInfo}>
                       <div>

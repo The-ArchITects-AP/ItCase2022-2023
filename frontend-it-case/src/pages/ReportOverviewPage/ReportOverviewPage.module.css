@@ -16,7 +16,9 @@
     border-radius: 10px;
 }
 
-.reportContainer img {  
+.reportImage {  
+    width: 500px;
+    height: 300px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
@@ -45,4 +47,66 @@
 
 .back {
     padding: 3rem 3rem 4rem 3rem;
+}
+
+@media all and (max-width:1100px) {
+    .reportContainer {
+        width: 400px;
+        height: 340px;
+    }
+
+    .reportImage {  
+        width: 400px;
+        height: 250px;
+    }
+}
+
+@media all and (max-width:800px) {
+    .reportContainer {
+        width: 290px;
+        height: 245px;
+    }
+
+    .reportImage {  
+        width: 290px;
+        height: 170px;
+    }
+
+    .reportInfo {
+        font-size: 11pt;  
+    }
+
+    .reportIcon {
+        width: 35px;
+        height: 35px;
+        padding: 1rem 1rem 0 1rem;
+    }
+
+    .title {    
+        font-size: 11pt;    
+    }
+}
+
+@media all and (max-width:500px) {  
+    .overviewPageContainer {
+        justify-content: center;
+    }
+
+    .reportContainer {
+        height: 235px;
+    }
+
+    .reportInfo {
+        font-size: 9.5pt;  
+    }
+    
+    .reportIcon {
+        width: 30px;
+        height: 30px; 
+        padding: 0.7rem 1rem 0 1rem;       
+    }
+    
+    .title {    
+        font-size: 9.5pt;    
+    }
 }
