@@ -1,6 +1,6 @@
 .homePageContainer {
     display: flex;
-    max-width: 85%;
+    width: 85%;
     flex-direction: row;
     flex-wrap: wrap;
     padding-top: 4rem;
@@ -8,4 +8,5 @@
     margin: auto;
     padding-bottom: 3rem;
 }
+
 

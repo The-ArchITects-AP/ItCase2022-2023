@@ -3,6 +3,39 @@ import { Link, useParams } from "react-router-dom";
 import { IFrame, UserData } from "../../types";
 import ForbiddenPage from "../ForbiddenPage/ForbiddenPage";
 
+//Tijdelijke data voor CSS
+//Drupal data niet zichtbaar op localhost
+
+const reportsTemporary = [
+  {
+    nid: "14",
+    field_report_category: "Engineering",
+    title: "COVID",
+    field_date: "2022-03-25",
+    field_type_of_report: "Power Bi ",
+    field_thumbnail: "",
+    field_iframe: "https://app.powerbi.com/view?r=eyJrIjoiYjA1YzhhMjItMWU1ZS00YmRiLWI3MjUtZDVhN2ZlMzY4NjFlIiwidCI6IjJjOTJmZjI0LWI0MmMtNDgwZC1iNzRkLTY2ZmNlNzZiZDdkYSIsImMiOjl9"
+    },
+    {
+    nid: "12",
+    field_report_category: "Engineering",
+    title: "COVID",
+    field_date: "2022-03-25",
+    field_type_of_report: "Power Bi ",
+    field_thumbnail: "/sites/default/files/2022-12/Covid_Thumbnail_3.jpg",
+    field_iframe: "https://app.powerbi.com/view?r=eyJrIjoiYjA1YzhhMjItMWU1ZS00YmRiLWI3MjUtZDVhN2ZlMzY4NjFlIiwidCI6IjJjOTJmZjI0LWI0MmMtNDgwZC1iNzRkLTY2ZmNlNzZiZDdkYSIsImMiOjl9"
+    },
+    {
+    nid: "8",
+    field_report_category: "Engineering",
+    title: "The Rat Pack",
+    field_date: "2022-03-25",
+    field_type_of_report: "Tableau",
+    field_thumbnail: "/sites/default/files/2022-12/RatPack_Thumbnail_1.jpg",
+    field_iframe: "https://public.tableau.com/views/RunningWiththePack/RunningwiththePack?:showVizHome=no&:embed=true&:language=en-US&:display_count=n&:origin=viz_share_link&:auto_resize=yes"
+    }
+]
+
 interface ReportProps {
   reports: IFrame[];
   userData?: UserData;
@@ -10,7 +43,7 @@ interface ReportProps {
 
 const ReportDetailPage = ({ reports, userData }: ReportProps) => {
   let { nid } = useParams();
-  const toShow = reports.find((item) => item.nid === nid);
+  const toShow = reportsTemporary.find((item) => item.nid === nid);
 
   if (!toShow) {
     return <p>Loading...</p>;
@@ -18,10 +51,12 @@ const ReportDetailPage = ({ reports, userData }: ReportProps) => {
 
   console.log(toShow);
 
-  const checkRole =
-    userData?.clientPrincipal.userRoles.includes(
-      toShow.field_report_category.toLowerCase()
-    ) || userData?.clientPrincipal.userRoles.includes("admin");
+  // const checkRole =
+  //   userData?.clientPrincipal.userRoles.includes(
+  //     toShow.field_report_category.toLowerCase()
+  //   ) || userData?.clientPrincipal.userRoles.includes("admin");
+
+  const checkRole = true;
 
   if (checkRole) {
     return (
@@ -32,15 +67,11 @@ const ReportDetailPage = ({ reports, userData }: ReportProps) => {
 
         <div className={styles.reportContainer} key={toShow.nid}>
           <p className={styles.title}>{toShow.title}</p>
-          <p>
-            Id: {toShow.nid} | Category: {toShow.field_report_category} | Type
-            of report: {toShow.field_type_of_report}
-          </p>
+          <p className={styles.text}>Added on: {toShow.field_date} | {toShow.field_report_category} | {toShow.field_type_of_report}</p>
           <iframe
+            className={styles.iframe}
             src={toShow.field_iframe}
             title="Report"
-            width="1500"
-            height="500"
             allowFullScreen={true}
           ></iframe>
         </div>

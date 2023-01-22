@@ -5,12 +5,14 @@
     max-width: 85%;
     gap: 3.5rem;   
     margin: auto;
-    padding-bottom: 3rem;
+    padding-bottom: 6rem;
 }
 
 .reportContainer {
+    width: 500px;
+    height: 385px;
     padding-bottom: 0.6rem;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     border-radius: 10px;
 }
 
@@ -42,5 +44,5 @@
 }
 
 .back {
-    padding: 3rem;
+    padding: 3rem 3rem 4rem 3rem;
 }

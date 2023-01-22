@@ -7,44 +7,35 @@ import NoContentPage from "../NoContentPage/NoContentPage";
 //Tijdelijke data voor CSS
 //Drupal data niet zichtbaar op localhost
 
-// const reportsTemporary = [
-//   {
-//     nid: "14",
-//     field_report_category: "Engineering",
-//     title: "COVID",
-//     field_date: new Date("2022-03-25"),
-//     field_type_of_report: "Power Bi ",
-//     field_thumbnail: "/sites/default/files/2022-12/Covid_Thumbnail_4.jpg",
-//     field_iframe: "https://app.powerbi.com/view?r=eyJrIjoiYjA1YzhhMjItMWU1ZS00YmRiLWI3MjUtZDVhN2ZlMzY4NjFlIiwidCI6IjJjOTJmZjI0LWI0MmMtNDgwZC1iNzRkLTY2ZmNlNzZiZDdkYSIsImMiOjl9"
-//     },
-//     {
-//     nid: "13",
-//     field_report_category: "Engineering",
-//     title: "The Rat Pack",
-//     field_date: new Date("2022-03-25"),
-//     field_type_of_report: "Tableau",
-//     field_thumbnail: "/sites/default/files/2022-12/RatPack_Thumbnail_2.jpg",
-//     field_iframe: "https://public.tableau.com/views/RunningWiththePack/RunningwiththePack?:showVizHome=no&:embed=true&:language=en-US&:display_count=n&:origin=viz_share_link&:auto_resize=yes"
-//     },
-//     {
-//     nid: "12",
-//     field_report_category: "Engineering",
-//     title: "COVID",
-//     field_date: new Date("2022-03-25"),
-//     field_type_of_report: "Power Bi ",
-//     field_thumbnail: "/sites/default/files/2022-12/Covid_Thumbnail_3.jpg",
-//     field_iframe: "https://app.powerbi.com/view?r=eyJrIjoiYjA1YzhhMjItMWU1ZS00YmRiLWI3MjUtZDVhN2ZlMzY4NjFlIiwidCI6IjJjOTJmZjI0LWI0MmMtNDgwZC1iNzRkLTY2ZmNlNzZiZDdkYSIsImMiOjl9"
-//     },
-//     {
-//     nid: "8",
-//     field_report_category: "Engineering",
-//     title: "The Rat Pack",
-//     field_date: new Date("2022-03-25"),
-//     field_type_of_report: "Tableau",
-//     field_thumbnail: "/sites/default/files/2022-12/RatPack_Thumbnail_1.jpg",
-//     field_iframe: "https://public.tableau.com/views/RunningWiththePack/RunningwiththePack?:showVizHome=no&:embed=true&:language=en-US&:display_count=n&:origin=viz_share_link&:auto_resize=yes"
-//     }
-// ]
+const reportsTemporary = [
+  {
+    nid: "14",
+    field_report_category: "Engineering",
+    title: "COVID",
+    field_date: "2022-03-25",
+    field_type_of_report: "Power Bi ",
+    field_thumbnail: "",
+    field_iframe: "https://app.powerbi.com/view?r=eyJrIjoiYjA1YzhhMjItMWU1ZS00YmRiLWI3MjUtZDVhN2ZlMzY4NjFlIiwidCI6IjJjOTJmZjI0LWI0MmMtNDgwZC1iNzRkLTY2ZmNlNzZiZDdkYSIsImMiOjl9"
+    },
+    {
+    nid: "12",
+    field_report_category: "Engineering",
+    title: "COVID",
+    field_date: "2022-03-25",
+    field_type_of_report: "Power Bi ",
+    field_thumbnail: "/sites/default/files/2022-12/Covid_Thumbnail_3.jpg",
+    field_iframe: "https://app.powerbi.com/view?r=eyJrIjoiYjA1YzhhMjItMWU1ZS00YmRiLWI3MjUtZDVhN2ZlMzY4NjFlIiwidCI6IjJjOTJmZjI0LWI0MmMtNDgwZC1iNzRkLTY2ZmNlNzZiZDdkYSIsImMiOjl9"
+    },
+    {
+    nid: "8",
+    field_report_category: "Engineering",
+    title: "The Rat Pack",
+    field_date: "2022-03-25",
+    field_type_of_report: "Tableau",
+    field_thumbnail: "/sites/default/files/2022-12/RatPack_Thumbnail_1.jpg",
+    field_iframe: "https://public.tableau.com/views/RunningWiththePack/RunningwiththePack?:showVizHome=no&:embed=true&:language=en-US&:display_count=n&:origin=viz_share_link&:auto_resize=yes"
+    }
+]
 
 interface ReportProps {
   reports: IFrame[];
@@ -53,7 +44,7 @@ interface ReportProps {
 
 const ReportOverviewPage = ({ reports, userData }: ReportProps) => {
   let { title } = useParams();
-  const toShow: IFrame[] = reports.filter(
+  const toShow: IFrame[] = reportsTemporary.filter(
     (item) => item.field_report_category === title
   );
 
@@ -64,12 +55,12 @@ const ReportOverviewPage = ({ reports, userData }: ReportProps) => {
   }
 
   if (toShow.length !== 0) {
-    const checkRole =
-      userData?.clientPrincipal.userRoles.includes(
-        toShow[0].field_report_category.toLowerCase()
-      ) || userData?.clientPrincipal.userRoles.includes("admin");
+    // const checkRole =
+    //   userData?.clientPrincipal.userRoles.includes(
+    //     toShow[0].field_report_category.toLowerCase()
+    //   ) || userData?.clientPrincipal.userRoles.includes("admin");
 
-    // const checkRole = true;
+    const checkRole = true;
 
     if (checkRole) {
       return (
