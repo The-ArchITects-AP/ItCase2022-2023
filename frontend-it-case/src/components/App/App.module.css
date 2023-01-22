@@ -1,6 +1,4 @@
 .appContainer {
-  display: flex;
-  flex-direction: column;
   min-height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
   background-color: #fff;

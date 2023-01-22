@@ -6,3 +6,9 @@
 .forbiddenContainer h3 {
     margin-top: 2rem;
 }
+
+@media all and (max-width:500px) { 
+    .forbiddenContainer h3 {
+        font-size: 12pt;
+    }
+}

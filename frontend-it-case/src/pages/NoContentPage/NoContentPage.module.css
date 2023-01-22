@@ -6,3 +6,9 @@
 .noContentContainer h3 {
     margin-top: 2rem;
 }
+
+@media all and (max-width:500px) { 
+    .noContentContainer h3 {
+        font-size: 12pt;
+    }
+}
