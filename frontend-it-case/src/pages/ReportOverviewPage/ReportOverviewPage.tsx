@@ -58,7 +58,7 @@ const ReportOverviewPage = ({ reports, userData }: ReportProps) => {
                         "tableau" ? (
                           <img
                             className={styles.reportIcon}
-                            src="/Tableau.svg"
+                            src="/Tableau.png"
                             alt="Tableau icon"
                           />
                         ) : data.field_type_of_report.toLowerCase().trim() ===
