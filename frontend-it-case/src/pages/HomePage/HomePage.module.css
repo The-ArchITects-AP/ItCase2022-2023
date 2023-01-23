@@ -1,6 +1,6 @@
 .homePageContainer {
     display: flex;
-    max-width: 85%;
+    width: 85%;
     flex-direction: row;
     flex-wrap: wrap;
     padding-top: 4rem;
@@ -9,3 +9,8 @@
     padding-bottom: 3rem;
 }
 
+@media all and (max-width:500px) {
+    .homePageContainer {
+        justify-content: center;
+    }
+}

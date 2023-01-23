@@ -14,8 +14,7 @@ const Tile = ({ category }: DataProps) => {
                 <div className={styles.tileHeader}>
                     <p>{category.title}</p>
                 </div>
-                {/* kunnen eventueel description field meegeven via Drupal API */}
-                <p className={styles.tileDescription}>View {category.title} reports</p>
+                <p className={styles.tileDescription}>View {category.title.toLowerCase()} reports</p>
             </div>
         </div>
     );

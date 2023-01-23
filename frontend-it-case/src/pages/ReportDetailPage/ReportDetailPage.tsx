@@ -27,20 +27,16 @@ const ReportDetailPage = ({ reports, userData }: ReportProps) => {
     return (
       <div>
         <div className={styles.back}>
-          <Link to={`/report/${toShow.field_report_category}`}>Back</Link>
+          <Link to={`/report/${toShow.field_report_category}`}>{`[ back ]`}</Link>
         </div>
 
         <div className={styles.reportContainer} key={toShow.nid}>
           <p className={styles.title}>{toShow.title}</p>
-          <p>
-            Id: {toShow.nid} | Category: {toShow.field_report_category} | Type
-            of report: {toShow.field_type_of_report}
-          </p>
+          <p className={styles.text}>Added on: {toShow.field_date} | {toShow.field_report_category} | {toShow.field_type_of_report}</p>
           <iframe
+            className={styles.iframe}
             src={toShow.field_iframe}
             title="Report"
-            width="1500"
-            height="500"
             allowFullScreen={true}
           ></iframe>
         </div>
@@ -51,7 +47,7 @@ const ReportDetailPage = ({ reports, userData }: ReportProps) => {
   return (
     <div>      
       <div className={styles.back}>
-        <Link to={`/report/${toShow.field_report_category}`}>Back</Link>
+        <Link to={`/report/${toShow.field_report_category}`}>{`[ back ]`}</Link>
       </div>
       <ForbiddenPage />
     </div>

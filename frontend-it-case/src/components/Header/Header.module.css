@@ -26,3 +26,22 @@
     margin-top: 1rem;
     font-weight: bold;
 }
+
+@media all and (max-width:500px) {
+    .headerContainer {
+        padding: 0.8rem 1.5rem;
+    }
+
+    .logoContainer img {
+        width: 110px;
+    }
+    
+    .userContainer {
+        gap: 1rem;
+        font-size: 8.5pt;
+    }
+    
+    .userContainer a {
+        margin-top: 0.7rem;
+    }
+}
