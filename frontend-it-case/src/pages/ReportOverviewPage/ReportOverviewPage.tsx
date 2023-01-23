@@ -40,6 +40,7 @@ const ReportOverviewPage = ({ reports, userData }: ReportProps) => {
                 <div className={styles.reportContainer}>
                   <Link to={`/report/detail/${data.nid}`} key={data.nid}>
                     {/*
+                    // UNCOMMENT TO USE SCREENSHOT API
                       <img
                       className={styles.reportImage}
                       src={`https://api.apiflash.com/v1/urltoimage?access_key=ad6f7c37ed5d4f3d9f42d09dcbcd4365&wait_until=page_loaded&url=${data.field_iframe}&delay=10`}
@@ -53,12 +54,27 @@ const ReportOverviewPage = ({ reports, userData }: ReportProps) => {
                     />
                     <div className={styles.reportInfo}>
                       <div>
-                        {data.field_type_of_report.toLowerCase().trim() === "tableau" ?
-                          <img className={styles.reportIcon} src="/Tableau.svg" alt="Tableau icon" /> :
-                          data.field_type_of_report.toLowerCase().trim() === "power bi" ?
-                            <img className={styles.reportIcon} src="/PowerBI.png" alt="Power BI icon" /> :
-                            <img className={styles.reportIcon} src="/DefaultIcon.png" alt="Default icon" />
-                        }
+                        {data.field_type_of_report.toLowerCase().trim() ===
+                        "tableau" ? (
+                          <img
+                            className={styles.reportIcon}
+                            src="/Tableau.svg"
+                            alt="Tableau icon"
+                          />
+                        ) : data.field_type_of_report.toLowerCase().trim() ===
+                          "power bi" ? (
+                          <img
+                            className={styles.reportIcon}
+                            src="/PowerBI.png"
+                            alt="Power BI icon"
+                          />
+                        ) : (
+                          <img
+                            className={styles.reportIcon}
+                            src="/DefaultIcon.png"
+                            alt="Default icon"
+                          />
+                        )}
                       </div>
                       <div className={styles.text}>
                         <p className={styles.title}>{data.title}</p>
@@ -92,7 +108,6 @@ const ReportOverviewPage = ({ reports, userData }: ReportProps) => {
       <NoContentPage />
     </div>
   );
-
 };
 
 export default ReportOverviewPage;
